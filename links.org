@@ -2,12 +2,9 @@
 1. [[https://github.com/mullikine/irresearch/][GitHub - mullikine/irresearch]]
 
 * Reading
-[[https://docs.lib.purdue.edu/open_access_dissertations/66/][Source Code Retrieval from Large Software Libraries for Automatic Bug Localization (2013) Bunyamin Sisman, Purdue University]]
+1. [[https://docs.lib.purdue.edu/open_access_dissertations/66/][SCR from LSL for ABL Localization (2013) Bunyamin Sisman, Purdue University]]
+   [[file:Notes%20on%20SCR%20from%20LSL%20for%20ABL.org][Notes]] [[http://htmlpreview.github.com/?https://github.com/mullikine/irresearch/blob/master/Notes%20on%20SCR%20from%20LSL%20for%20ABL.html][(html)]]
 
-* Org-Mode Documents
-1. [[file:Repository_Hosting_Services_research.org][Look into APIs for accessing Repository Hosting Services]]
-2. [[file:Notes%20on%20SCR%20from%20LSL%20for%20ABL.org][Notes on SCR from LSL for ABL]]
-
-* Rendered HTML
-2. [[http://htmlpreview.github.com/?https://github.com/mullikine/irresearch/blob/master/Notes%20on%20SCR%20from%20LSL%20for%20ABL.html][Notes on SCR from LSL for ABL]]
-3. [[http://htmlpreview.github.com/?https://github.com/mullikine/irresearch/blob/master/Repository_Hosting_Services_research.html][Repository Hosting Services research]]
+* Research
+1. Look into APIs for accessing Repository Hosting Services
+   [[file:Repository_Hosting_Services_research.org][Notes]] [[http://htmlpreview.github.com/?https://github.com/mullikine/irresearch/blob/master/Repository_Hosting_Services_research.html][(html)]]
