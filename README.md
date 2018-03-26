@@ -2,8 +2,8 @@
 # Links
 
 1.  [GitHub - mullikine/irresearch](https://github.com/mullikine/irresearch/)
-2.  [Notes on SCR from LSL for ABL](http://htmlpreview.github.com/?https://raw.githubusercontent.com/mullikine/irresearch/master/Notes%2520on%2520SCR%2520from%2520LSL%2520for%2520ABL.html)
-3.  [Repository Hosting Services research](http://htmlpreview.github.com/?https://raw.githubusercontent.com/mullikine/irresearch/master/Repository_Hosting_Services_research.html)
+2.  [Notes on SCR from LSL for ABL](http://htmlpreview.github.com/?https://github.com/mullikine/irresearch/blob/master/Notes%2520on%2520SCR%2520from%2520LSL%2520for%2520ABL.html)
+3.  [Repository Hosting Services research](http://htmlpreview.github.com/?https://github.com/mullikine/irresearch/blob/master/Repository_Hosting_Services_research.html)
 
 <div class="outline-2" id="meta">
 
@@ -18,13 +18,13 @@
 <tbody>
 <tr>
 <td class="org-left">**Author**</td>
-<td class="org-left">Shane Mulligan (<mailto:mullikine@gmail.com>)</td>
+<td class="org-left">Shane Mulligan Shane Mulligan (<mailto:mullikine@gmail.com>)</td>
 </tr>
 
 
 <tr>
 <td class="org-left">**Date**</td>
-<td class="org-left">2018-03-26 15:35:12</td>
+<td class="org-left">2018-03-26 15:39:07</td>
 </tr>
 </tbody>
 </table>
@@ -160,7 +160,7 @@ Results
 
 ## Repository Hosting Services
 
-<table id="org733f5da">
+<table id="org78cd3a8">
 
 
 <colgroup>
@@ -282,7 +282,7 @@ Results
 
 ## Code Search Servers
 
-<table id="org129a4be">
+<table id="orge0a77ba">
 
 
 <colgroup>
@@ -954,6 +954,32 @@ Generate Python files AST
 # References
 
 <https://en.wikipedia.org/wiki/Comparison_of_source_code_hosting_facilities#Features>
+
+<div class="outline-2" id="meta">
+
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">**Author**</td>
+<td class="org-left">Shane Mulligan Shane Mulligan (<mailto:mullikine@gmail.com>)</td>
+</tr>
+
+
+<tr>
+<td class="org-left">**Date**</td>
+<td class="org-left">2018-03-26 15:39:07</td>
+</tr>
+</tbody>
+</table>
+
+</div>
 
 
 # External
