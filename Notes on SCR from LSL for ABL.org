@@ -18,10 +18,22 @@
 
 #+BEGIN_SRC bash
 z "$DUMP$HOME/notes2018/uni/cosc/480-project_FY/research/Source Code Retrieval from Large Software Libraries for Automatic.pdf"
+sp "$DUMP$HOME/notes2018/uni/cosc/480-project_FY/research/Source Code Retrieval from Large Software Libraries for Automatic.txt"
 #+END_SRC
 
 * Refactorings
 1. parens to def :: '<,'>s/\(.*\)(\(.*\))/\1:: \2/g
+
+* Notation 
+** SBM
+
+| symbol | description                      |
+|--------+----------------------------------|
+| F      | RFn                              |
+| Q      | [01] statement about a query     |
+| B      | [01] algebra over a set of words |
+| d      | [01] rep. of a d in the C        |
+| q_i    | [01] rep. of i^th word in a q    |
 
 * Prp Method in this Dissertation:
 ** Domain
@@ -60,72 +72,80 @@ Large and changing
 12. HDbP Model
 
 * Terms
-1. LSL :: Large Software Libraries
-2. LSI :: Latent Semantic Indexing
-3. ABL :: Automatic Bug Localisation
-4. m :: method
-5. Hm :: Hybrid method
+1. RFn :: Retrieval Function
+2. [01] :: Boolean
+3. LSL :: Large Software Libraries
+4. LSI :: Latent Semantic Indexing
+5. ABL :: Automatic Bug Localisation
+6. m :: method
+7. Hm :: Hybrid method
          Hybrid approach
-6. SS :: Search Space
-7. M :: Model
-8. d :: document
-9. Li :: Liklihood
-10. Prp :: Proposed by this dissertation
-11. PrpA :: Proposed Approach
-12. Ralg :: Relevance Algorithm
-13. IN :: Information Need
-14. BL :: Bug Localisation
-15. QR :: Query Reformulation
-16. QRM :: Query Reformulation Model
-17. SCR :: Source Code Retrieval
+8. SS :: Search Space
+9. SPR :: Scenario-based Probabilistic Ranking
+10. FCA :: Formal Concept Analysis
+11. M :: Model
+12. d :: document
+13. Li :: Liklihood
+14. Prp :: Proposed by this dissertation
+15. PrpA :: Proposed Approach
+16. Ralg :: Relevance Algorithm
+17. IN :: Information Need
+18. BL :: Bug Localisation
+19. QR :: Query Reformulation
+20. QRM :: Query Reformulation Model
+21. SCR :: Source Code Retrieval
     CS :: Code Search
-18. Dm :: Dynamic methods
+22. Dm :: Dynamic methods
        :: Dynamic methods
-19. Sm :: Static methods
+23. Sm :: Static methods
           Static approach
-21. IRm :: IR methods
-22. SBM :: Standard Boolean Model
-23. VSM :: Vector Space Model
+24. IRm :: IR methods
+25. SBM :: Standard Boolean Model
+26. VSM :: Vector Space Model
     BoW :: Bag of Words
     BoWM :: BoW Model
-24. BoWa :: BoW assumption
-25. DFR :: Divergence From Randomness
-26. TFIM :: TF-IDF Models
-27. TFIRM :: TF-IDF Retrieval Models
-28. BF :: Bayesian framework
+27. BoWa :: BoW assumption
+28. DFR :: Divergence From Randomness
+29. TFIM :: TF-IDF Models
+30. TFIRM :: TF-IDF Retrieval Models
+31. BF :: Bayesian framework
     PF :: Probabilistic framework
-29. ICN :: Information Content Normalisation
-30. DLN :: Document Length Normalisation
-31. UM :: Unigram Model
-32. PTM :: Probabilistic Topic Models
-33. MU :: Mixture of Unigrams
-34. pLSA :: Probabilistic Latent Semantic Analysis
-35. LDA :: Latent Dirichlet Allocation
-36. DR :: Document Retrieval
-37. LM :: Lanugage Modelling
-38. RM :: Retrieval Models
-39. PD :: Probability Distribution
-40. P1 :: Probability 1
-41. P2 :: Probability 2
-42. VH :: Version Histories
-43. Pr :: Priors
+32. ICN :: Information Content Normalisation
+33. DLN :: Document Length Normalisation
+34. UM :: Unigram Model
+35. PTM :: Probabilistic Topic Models
+36. MU :: Mixture of Unigrams
+37. pLSA :: Probabilistic Latent Semantic Analysis
+38. LDA :: Latent Dirichlet Allocation
+39. DR :: Document Retrieval
+40. LM :: Lanugage Modelling
+41. RM :: Retrieval Models
+42. PD :: Probability Distribution
+43. P1 :: Probability 1
+44. P2 :: Probability 2
+45. VH :: Version Histories
+46. Pr :: Priors
     PP / PrP :: Prior Probabilities
-44. D+M :: Defect + Modification
-45. TD :: Temporal Decay
-46. DPr :: Document Priors
-47. DP :: Document Preparation
-48. QR :: Query Reformulation
-49. ERF :: Explicit Relevance Feedback
-50. PRF :: Pseudo Relevance Feedback
-51. SCP :: Spacial Code Proximity
-52. rFm :: Roccio's Formula
-53. iTh :: Information Theoretic
-54. RR :: Retrieval Results
-55. RS :: Retrieval Score
-56. DRT :: Document Retrieval Techniques
-57. MRF / RMF :: Markov Random Field / Random Markov Field
-58. Wf :: Word Frequencies
-59. IaR :: Interactive Refinement
+47. D+M :: Defect + Modification
+48. TD :: Temporal Decay
+49. DPr :: Document Priors
+50. DP :: Document Preparation
+51. QR :: Query Reformulation
+52. ERF :: Explicit Relevance Feedback
+53. PRF :: Pseudo Relevance Feedback
+54. SCP :: Spacial Code Proximity
+55. rFm :: Roccio's Formula
+56. iTh :: Information Theoretic
+57. RR :: Retrieval Results
+58. RS :: Retrieval Score
+59. DRT :: Document Retrieval Techniques
+60. MRF / RMF :: Markov Random Field / Random Markov Field
+61. Wf :: Word Frequencies
+62. qW :: Query Words
+63. q :: Query
+64. IaR :: Interactive Refinement
+65. NL :: Natural Language
+66. C :: Document Collection / Text Corpus
 
 * Math (get correct symbols)
 1. BoW :: ∀x; x ∈ A
@@ -164,6 +184,11 @@ Large and changing
           But lacks the notion of ranking.
 7. RS :: The higher the RS, the more relevant.
 8. Hm :: Combinations of Dm, Sm and IR to narrow down the SS with Dm then use Sm on a smaller SS for better accuracy.
+9. SPR :: Assigns 2 probabilities to the methods in the execution traces:
+   1. One indicates the probability of the method to exercise the feature; and
+   2. the other NOT to.
+   
+   Based on these probabilities, the method is classified as either relevant or irrelevant.
 
 * Uses
 1. Bug report is used as a query
@@ -188,44 +213,49 @@ Large and changing
       Also, can't deal with non-executable files.
 
 * Outline
-2. IR for BL
-3. Organisation of this dissertation
-4. Dm
-5. Sm
-6. IR Methods
-7. Hm
-8. SBM
-9. VSM
-10. DFR
-    1. Using different PD in IC
-       1. P1
-       2. P2
-    2. TFIM for P1
-    3. ICN (P2)
-    4. DLN
-11. UM
-12. PTM
-13. MU
-14. pLSA
-15. LDA
-16. DR with PTM
-17. IR for BL
-18. LM
-19. TFIRM
-20. Incorporating VH in IR-based BL
-21. Estimating D+M -based PrP
-22. MHbP Model
-23. HDbP Model
-24. M the Pr with TD
-25. BF for BL
-26. DPr
-27. Experimental Evaluation
-28. DP for BL with VH
-29. RR
-30. Assisting CS with AQR for BL
-31. ERF
-32. PRF
-33. rFm for ARQ
-34. AQR using the RM.
-35. The PrpA to QR for SCR
-36. Wf
+1. IR for BL
+2. Organisation of this dissertation
+3. Dm
+4. Sm
+5. IR Methods
+6. Hm
+7. SBM
+8. VSM
+9. DFR
+   1. Using different PD in IC
+      1. P1
+      2. P2
+   2. TFIM for P1
+   3. ICN (P2)
+   4. DLN
+10. UM
+11. PTM
+12. MU
+13. pLSA
+14. LDA
+15. DR with PTM
+16. IR for BL
+17. LM
+18. TFIRM
+19. Incorporating VH in IR-based BL
+20. Estimating D+M -based PrP
+21. MHbP Model
+22. HDbP Model
+23. M the Pr with TD
+24. BF for BL
+25. DPr
+26. Experimental Evaluation
+27. DP for BL with VH
+28. RR
+29. Assisting CS with AQR for BL
+30. ERF
+31. PRF
+32. rFm for ARQ
+33. AQR using the RM.
+34. The PrpA to QR for SCR
+35. Wf
+
+* M for NL DR
++ SBM :: DR is performed on the basis of presense of qW in the C.
+Not indicate any word more important than others, makes any logical query possible.
++ SBM :: Bool Logic & Set Theory
