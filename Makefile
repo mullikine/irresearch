@@ -8,6 +8,8 @@ default: orgtomd orgtohtml
 
 orgtomd:
 	:
+	# (org-md-export-to-markdown)
 
 orgtohtml:
 	:
+	# (org-html-export-to-html)
