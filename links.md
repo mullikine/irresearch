@@ -1,28 +1,26 @@
 
 # Table of Contents
 
-1.  [Project Links](#orgb02a3c5)
-2.  [Reading](#org61390aa)
-3.  [Research](#org66f1e0c)
+1.  [Project Links](#org7325b09)
+2.  [Reading](#orge202f5f)
+3.  [Research](#org56f959e)
 
 
-<a id="orgb02a3c5"></a>
+<a id="org7325b09"></a>
 
 # Project Links
 
-1.  [GitHub - mullikine/irresearch](https://github.com/mullikine/irresearch/)
+-   [GitHub - mullikine/irresearch](https://github.com/mullikine/irresearch/)
 
 
-<a id="org61390aa"></a>
+<a id="orge202f5f"></a>
 
 # Reading
 
-1.  [SCR from LSL for ABL Localization (2013) Bunyamin Sisman, Purdue University](https://docs.lib.purdue.edu/open_access_dissertations/66/)
-    
-    [Notes](Notes%20on%20SCR%20from%20LSL%20for%20ABL.md) [(html)](http://htmlpreview.github.com/?https://github.com/mullikine/irresearch/blob/master/Notes%20on%20SCR%20from%20LSL%20for%20ABL.html)
+-   **[SCR from LSL for ABL Localization (2013) Bunyamin Sisman, Purdue University](https://docs.lib.purdue.edu/open_access_dissertations/66/):** [Notes](Notes%20on%20SCR%20from%20LSL%20for%20ABL.md) [(html)](http://htmlpreview.github.com/?https://github.com/mullikine/irresearch/blob/master/Notes%20on%20SCR%20from%20LSL%20for%20ABL.html)
 
 
-<a id="org66f1e0c"></a>
+<a id="org56f959e"></a>
 
 # Research
 
