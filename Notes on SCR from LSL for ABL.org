@@ -73,9 +73,12 @@ Large and changing
 12. HDbP Model
 
 * Terms
-1. + RFn :: Retrieval Function
-2. + [01] :: Boolean
-3. + LSL :: Large Software Libraries
+1. 
+   + RFn :: Retrieval Function
+2. 
+   + [01] :: Boolean
+3. 
+   + LSL :: Large Software Libraries
 4. + LSI :: Latent Semantic Indexing
 5. + ABL :: Automatic Bug Localisation
 6. + m :: method / approach

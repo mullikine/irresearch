@@ -17,7 +17,7 @@
 
 <tr>
 <td class="org-left">**Date**</td>
-<td class="org-left">2018-03-27 00:45:50</td>
+<td class="org-left">2018-03-27 00:50:34</td>
 </tr>
 </tbody>
 </table>
@@ -143,9 +143,9 @@ Large and changing
 
 # Terms
 
-1.  + RFn :: Retrieval Function
-2.  + [01] :: Boolean
-3.  + LSL :: Large Software Libraries
+1.  -   **RFn:** Retrieval Function
+2.  -   **[01]:** Boolean
+3.  -   **LSL:** Large Software Libraries
 4.  + LSI :: Latent Semantic Indexing
 5.  + ABL :: Automatic Bug Localisation
 6.  + m :: method / approach
