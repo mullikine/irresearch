@@ -17,7 +17,7 @@
 
 <tr>
 <td class="org-left">**Date**</td>
-<td class="org-left">2018-03-27 00:55:52</td>
+<td class="org-left">2018-03-27 02:41:03</td>
 </tr>
 </tbody>
 </table>
@@ -192,21 +192,22 @@ Large and changing
 49. DPr :: Document Priors
 50. DP :: Document Preparation
 51. QR :: Query Reformulation
-52. ERF :: Explicit Relevance Feedback
-53. PRF :: Pseudo Relevance Feedback
-54. SCP :: Spacial Code Proximity
-55. rFm :: Roccio's Formula
-56. iTh :: Information Theoretic
-57. RR :: Retrieval Results
-58. RS :: Retrieval Score
-59. DRT :: Document Retrieval Techniques
-60. MRF / RMF :: Markov Random Field / Random Markov Field
-61. Wf :: Word Frequencies
-62. qW :: Query Words
-63. q :: Query
-64. IaR :: Interactive Refinement
-65. NL :: Natural Language
-66. C :: Document Collection / Text Corpus
+52. AQR :: Automatic Query Reformulation
+53. ERF :: Explicit Relevance Feedback
+54. PRF :: Pseudo Relevance Feedback
+55. SCP :: Spacial Code Proximity
+56. rFm :: Rocchio's Formula
+57. iTh :: Information Theoretic
+58. RR :: Retrieval Results
+59. RS :: Retrieval Score
+60. DRT :: Document Retrieval Techniques
+61. MRF / RMF :: Markov Random Field / Random Markov Field
+62. Wf :: Word Frequencies
+63. qW :: Query Words
+64. q :: Query
+65. IaR :: Interactive Refinement
+66. NL :: Natural Language
+67. C :: Document Collection / Text Corpus
 
 
 # Math (get correct symbols)
@@ -330,7 +331,7 @@ Large and changing
 29. Assisting CS with AQR for BL
 30. ERF
 31. PRF
-32. rFm for ARQ
+32. rFm for AQR
 33. AQR using the RM.
 34. The PrpA to QR for SCR
 35. Wf
