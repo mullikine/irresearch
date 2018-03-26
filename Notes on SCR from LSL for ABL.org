@@ -129,9 +129,9 @@ Large and changing
 43. P1 :: Probability 1
 44. P2 :: Probability 2
 45. VH :: Version Histories
-46. 
-    1. Pr :: Priors
-    2. PP / PrP :: Prior Probabilities
+46. Pr :: Priors
+
+    PP / PrP :: Prior Probabilities
 47. D+M :: Defect + Modification
 48. TD :: Temporal Decay
 49. DPr :: Document Priors
