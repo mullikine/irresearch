@@ -101,6 +101,7 @@ z "$DUMP$HOME/notes2018/uni/cosc/480-project_FY/research/Source Code Retrieval f
 51. DRT :: Document Retrieval Techniques
 52. MRF / RMF :: Markov Random Field / Random Markov Field
 53. Wf :: Word Frequencies
+54. IaR :: Interactive Refinement
 
 * Math (get correct symbols)
 1. BoW :: ∀x; x ∈ A
@@ -130,6 +131,7 @@ z "$DUMP$HOME/notes2018/uni/cosc/480-project_FY/research/Source Code Retrieval f
    1. LM :: Uses a PF
    2. DFR :: iTh
 4. BoW :: Given a set of documents, allows you to rank them
+5. RMF :: Benefit over Traditional BL is IaR
 
 * Uses
 1. Bug report is used as a query
