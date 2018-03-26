@@ -1,10 +1,8 @@
 ** Project Links
-1. [[https://github.com/mullikine/irresearch/][GitHub - mullikine/irresearch]]
++ [[https://github.com/mullikine/irresearch/][GitHub - mullikine/irresearch]]
 
 ** Reading
-1. [[https://docs.lib.purdue.edu/open_access_dissertations/66/][SCR from LSL for ABL Localization (2013) Bunyamin Sisman, Purdue University]]
-
-   [[file:Notes%20on%20SCR%20from%20LSL%20for%20ABL.org][Notes]] [[http://htmlpreview.github.com/?https://github.com/mullikine/irresearch/blob/master/Notes%20on%20SCR%20from%20LSL%20for%20ABL.html][(html)]]
++ [[https://docs.lib.purdue.edu/open_access_dissertations/66/][SCR from LSL for ABL Localization (2013) Bunyamin Sisman, Purdue University]] :: [[file:Notes%20on%20SCR%20from%20LSL%20for%20ABL.org][Notes]] [[http://htmlpreview.github.com/?https://github.com/mullikine/irresearch/blob/master/Notes%20on%20SCR%20from%20LSL%20for%20ABL.html][(html)]]
 
 ** Research
 1. Look into APIs for accessing Repository Hosting Services
