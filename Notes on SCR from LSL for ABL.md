@@ -1,26 +1,29 @@
+<div class="outline-2" id="meta">
 
-# Table of Contents
-
-1.  [External](#orgfa87b25)
-2.  [Refactorings](#org1ae2e3a)
-3.  [Prp Method in this Dissertation:](#orgcf68315)
-    1.  [Apparatus](#org1baf714)
-    2.  [Steps](#orgb308187)
-4.  [Ambiguous Terms](#orgdb28062)
-5.  [Models](#orgd95d15e)
-6.  [Terms](#orgfa62ae2)
-7.  [Math (get correct symbols)](#orgf8f99eb)
-8.  [Definitions](#orgcd0e9c8)
-9.  [Notes](#orgb9e6a8c)
-10. [Annotations](#org8673faa)
-11. [Uses](#orgaab1bd5)
-12. [Problem => Solution](#org658b3ac)
-13. [IN](#org76043fd)
-14. [Outline](#org7e7c280)
-15. [Outline](#org922092c)
+<table>
 
 
-<a id="orgfa87b25"></a>
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">**Author**</td>
+<td class="org-left">Shane Mulligan (<mailto:mullikine@gmail.com>)</td>
+</tr>
+
+
+<tr>
+<td class="org-left">**Date**</td>
+<td class="org-left">2018-03-26 16:00:07</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
 
 # External
 
@@ -29,27 +32,19 @@
     z "$DUMP$HOME/notes2018/uni/cosc/480-project_FY/research/Source Code Retrieval from Large Software Libraries for Automatic.pdf"
 
 
-<a id="org1ae2e3a"></a>
-
 # Refactorings
 
 1.  parens to def :: '<,'>s/\(.*\)(\(.*\))/\\1:: \\2/g
 
 
-<a id="orgcf68315"></a>
-
 # Prp Method in this Dissertation:
 
-
-<a id="org1baf714"></a>
 
 ## Apparatus
 
 1.  BF
 2.  QRM
 
-
-<a id="orgb308187"></a>
 
 ## Steps
 
@@ -58,8 +53,6 @@
     PRF with SCP
 3.  Present a RMF
 
-
-<a id="orgdb28062"></a>
 
 # Ambiguous Terms
 
@@ -71,8 +64,6 @@
     1.  LDA :: Linear Discriminant Analysis
     2.  PCA :: Principal Component Analysis
 
-
-<a id="orgd95d15e"></a>
 
 # Models
 
@@ -90,8 +81,6 @@
 11. MHbP Model
 12. HDbP Model
 
-
-<a id="orgfa62ae2"></a>
 
 # Terms
 
@@ -153,17 +142,14 @@
 51. DRT :: Document Retrieval Techniques
 52. MRF / RMF :: Markov Random Field / Random Markov Field
 53. Wf :: Word Frequencies
+54. IaR :: Interactive Refinement
 
-
-<a id="orgf8f99eb"></a>
 
 # Math (get correct symbols)
 
 1.  BoW :: ∀x; x ∈ A
     Each d is a vector of Wf.
 
-
-<a id="orgcd0e9c8"></a>
 
 # Definitions
 
@@ -178,8 +164,6 @@
 4.  BoW / VSM :: A simplifying representation. Each d is a vector of Wf.
 
 
-<a id="orgb9e6a8c"></a>
-
 # Notes
 
 1.  Ignore structure but perform well:
@@ -187,8 +171,6 @@
     2.  iTh + BoW = TF-IDF
 2.  BoWa != BoWM
 
-
-<a id="org8673faa"></a>
 
 # Annotations
 
@@ -198,23 +180,18 @@
     1.  LM :: Uses a PF
     2.  DFR :: iTh
 4.  BoW :: Given a set of documents, allows you to rank them
+5.  RMF :: Benefit over Traditional BL is IaR
 
-
-<a id="orgaab1bd5"></a>
 
 # Uses
 
 1.  Bug report is used as a query
 
 
-<a id="org658b3ac"></a>
-
 # Problem => Solution
 
 1.  MRF => IR defect, Loss of inter-term relationships in documents
 
-
-<a id="org76043fd"></a>
 
 # IN
 
@@ -224,8 +201,6 @@
 4.  Traceability
 5.  Link Recovery
 
-
-<a id="org7e7c280"></a>
 
 # Outline
 
@@ -237,8 +212,6 @@
         Can't make an exhaustive set.
         Also, can't deal with non-executable files.
 
-
-<a id="org922092c"></a>
 
 # Outline
 
