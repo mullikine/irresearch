@@ -60,6 +60,7 @@ Large and changing
 1. QRM :: Query Reformulation Model
 2. SBM :: Standard Boolean Model
 3. VSM :: Vector Space Model
+
    BoWM :: Bag of Words Model
 4. TFIM :: TF-IDF Models
 5. TFIRM :: TF-IDF Retrieval Models
@@ -79,6 +80,7 @@ Large and changing
 5. ABL :: Automatic Bug Localisation
 6. m :: method
 7. Hm :: Hybrid method
+
          Hybrid approach
 8. SS :: Search Space
 9. SPR :: Scenario-based Probabilistic Ranking
@@ -103,12 +105,14 @@ Large and changing
 25. SBM :: Standard Boolean Model
 26. VSM :: Vector Space Model
     BoW :: Bag of Words
+
     BoWM :: BoW Model
 27. BoWa :: BoW assumption
 28. DFR :: Divergence From Randomness
 29. TFIM :: TF-IDF Models
 30. TFIRM :: TF-IDF Retrieval Models
 31. BF :: Bayesian framework
+
     PF :: Probabilistic framework
 32. ICN :: Information Content Normalisation
 33. DLN :: Document Length Normalisation
@@ -125,6 +129,7 @@ Large and changing
 44. P2 :: Probability 2
 45. VH :: Version Histories
 46. Pr :: Priors
+
     PP / PrP :: Prior Probabilities
 47. D+M :: Defect + Modification
 48. TD :: Temporal Decay

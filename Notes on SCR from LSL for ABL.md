@@ -17,7 +17,7 @@
 
 <tr>
 <td class="org-left">**Date**</td>
-<td class="org-left">2018-03-26 16:00:07</td>
+<td class="org-left">2018-03-27 00:32:26</td>
 </tr>
 </tbody>
 </table>
@@ -30,6 +30,7 @@
 [SCR from LSL for ABL.pdf](file:///home/shane/dump/home/shane/notes2017/uni/cosc/480-project_FY/research/Source%20Code%20Retrieval%20from%20Large%20Software%20Libraries%20for%20Automatic.pdf)
 
     z "$DUMP$HOME/notes2018/uni/cosc/480-project_FY/research/Source Code Retrieval from Large Software Libraries for Automatic.pdf"
+    sp "$DUMP$HOME/notes2018/uni/cosc/480-project_FY/research/Source Code Retrieval from Large Software Libraries for Automatic.txt"
 
 
 # Refactorings
@@ -37,7 +38,65 @@
 1.  parens to def :: '<,'>s/\(.*\)(\(.*\))/\\1:: \\2/g
 
 
+# Notation
+
+
+## SBM
+
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">symbol</th>
+<th scope="col" class="org-left">description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td class="org-left">F</td>
+<td class="org-left">RFn</td>
+</tr>
+
+
+<tr>
+<td class="org-left">Q</td>
+<td class="org-left">[01] statement about a query</td>
+</tr>
+
+
+<tr>
+<td class="org-left">B</td>
+<td class="org-left">[01] algebra over a set of words</td>
+</tr>
+
+
+<tr>
+<td class="org-left">d</td>
+<td class="org-left">[01] rep. of a d in the C</td>
+</tr>
+
+
+<tr>
+<td class="org-left">q<sub>i</sub></td>
+<td class="org-left">[01] rep. of i<sup>th</sup> word in a q</td>
+</tr>
+</tbody>
+</table>
+
+
 # Prp Method in this Dissertation:
+
+
+## Domain
+
+Large and changing
 
 
 ## Apparatus
@@ -56,12 +115,12 @@
 
 # Ambiguous Terms
 
-1.  DR :: dimensionality reduction
+1.  **DR** :: dimensionality reduction
 2.  LT :: Linear Transformation techniques
     
     Commonly used for DR
     
-    1.  LDA :: Linear Discriminant Analysis
+    1.  **LDA** :: Linear Discriminant Analysis
     2.  PCA :: Principal Component Analysis
 
 
@@ -70,6 +129,7 @@
 1.  QRM :: Query Reformulation Model
 2.  SBM :: Standard Boolean Model
 3.  VSM :: Vector Space Model
+    
     BoWM :: Bag of Words Model
 4.  TFIM :: TF-IDF Models
 5.  TFIRM :: TF-IDF Retrieval Models
@@ -84,65 +144,84 @@
 
 # Terms
 
-1.  LSL :: Large Software Libraries
-2.  ABL :: Automatic Bug Localisation
-3.  m :: method
-4.  M :: Model
-5.  d :: document
-6.  Li :: Liklihood
-7.  Prp :: Proposed by this dissertation
-8.  PrpA :: Proposed Approach
-9.  Ralg :: Relevance Algorithm
-10. IN :: Information Need
-11. BL :: Bug Localisation
-12. QR :: Query Reformulation
-13. QRM :: Query Reformulation Model
-14. SCR :: Source Code Retrieval
+1.  RFn :: Retrieval Function
+2.  [01] :: Boolean
+3.  LSL :: Large Software Libraries
+4.  LSI :: Latent Semantic Indexing
+5.  ABL :: Automatic Bug Localisation
+6.  m :: method
+7.  Hm :: Hybrid method
+    
+    Hybrid approach
+8.  SS :: Search Space
+9.  SPR :: Scenario-based Probabilistic Ranking
+10. FCA :: Formal Concept Analysis
+11. M :: Model
+12. d :: document
+13. Li :: Liklihood
+14. Prp :: Proposed by this dissertation
+15. PrpA :: Proposed Approach
+16. Ralg :: Relevance Algorithm
+17. IN :: Information Need
+18. BL :: Bug Localisation
+19. QR :: Query Reformulation
+20. QRM :: Query Reformulation Model
+21. SCR :: Source Code Retrieval
     CS :: Code Search
-15. Dm :: Dynamic methods
-16. Sm :: Static methods
-17. IRm :: IR methods
-18. SBM :: Standard Boolean Model
-19. VSM :: Vector Space Model
+22. Dm :: Dynamic methods
+    :: Dynamic methods
+23. Sm :: Static methods
+    Static approach
+24. IRm :: IR methods
+25. SBM :: Standard Boolean Model
+26. VSM :: Vector Space Model
     BoW :: Bag of Words
+    
     BoWM :: BoW Model
-20. BoWa :: BoW assumption
-21. DFR :: Divergence From Randomness
-22. TFIM :: TF-IDF Models
-23. TFIRM :: TF-IDF Retrieval Models
-24. BF :: Bayesian framework
+27. BoWa :: BoW assumption
+28. DFR :: Divergence From Randomness
+29. TFIM :: TF-IDF Models
+30. TFIRM :: TF-IDF Retrieval Models
+31. BF :: Bayesian framework
+    
     PF :: Probabilistic framework
-25. ICN :: Information Content Normalisation
-26. DLN :: Document Length Normalisation
-27. UM :: Unigram Model
-28. PTM :: Probabilistic Topic Models
-29. MU :: Mixture of Unigrams
-30. pLSA :: Probabilistic Latent Semantic Analysis
-31. LDA :: Latent Dirichlet Allocation
-32. DR :: Document Retrieval
-33. LM :: Lanugage Modelling
-34. RM :: Retrieval Models
-35. PD :: Probability Distribution
-36. P1 :: Probability 1
-37. P2 :: Probability 2
-38. VH :: Version Histories
-39. Pr :: Priors
+32. ICN :: Information Content Normalisation
+33. DLN :: Document Length Normalisation
+34. UM :: Unigram Model
+35. PTM :: Probabilistic Topic Models
+36. MU :: Mixture of Unigrams
+37. pLSA :: Probabilistic Latent Semantic Analysis
+38. LDA :: Latent Dirichlet Allocation
+39. DR :: Document Retrieval
+40. LM :: Lanugage Modelling
+41. RM :: Retrieval Models
+42. PD :: Probability Distribution
+43. P1 :: Probability 1
+44. P2 :: Probability 2
+45. VH :: Version Histories
+46. Pr :: Priors
+    
     PP / PrP :: Prior Probabilities
-40. D+M :: Defect + Modification
-41. TD :: Temporal Decay
-42. DPr :: Document Priors
-43. DP :: Document Preparation
-44. QR :: Query Reformulation
-45. ERF :: Explicit Relevance Feedback
-46. PRF :: Pseudo Relevance Feedback
-47. SCP :: Spacial Code Proximity
-48. rFm :: Roccio's Formula
-49. iTh :: Information Theoretic
-50. RR :: Retrieval Results
-51. DRT :: Document Retrieval Techniques
-52. MRF / RMF :: Markov Random Field / Random Markov Field
-53. Wf :: Word Frequencies
-54. IaR :: Interactive Refinement
+47. D+M :: Defect + Modification
+48. TD :: Temporal Decay
+49. DPr :: Document Priors
+50. DP :: Document Preparation
+51. QR :: Query Reformulation
+52. ERF :: Explicit Relevance Feedback
+53. PRF :: Pseudo Relevance Feedback
+54. SCP :: Spacial Code Proximity
+55. rFm :: Roccio's Formula
+56. iTh :: Information Theoretic
+57. RR :: Retrieval Results
+58. RS :: Retrieval Score
+59. DRT :: Document Retrieval Techniques
+60. MRF / RMF :: Markov Random Field / Random Markov Field
+61. Wf :: Word Frequencies
+62. qW :: Query Words
+63. q :: Query
+64. IaR :: Interactive Refinement
+65. NL :: Natural Language
+66. C :: Document Collection / Text Corpus
 
 
 # Math (get correct symbols)
@@ -162,6 +241,9 @@
     Can be used as the probability of having one more occurrence of the term in the document, which leads to penalizting the high frequency terms during retrieval.
 3.  BoWa :: Each word is sampled independantly from the rest of the words in the document.
 4.  BoW / VSM :: A simplifying representation. Each d is a vector of Wf.
+5.  LSI :: An early retrieval method.
+    Assign greater importance to terms that frequently co-occur in source files.
+    Can use to expand a given initial query that consists of a single query term initially.
 
 
 # Notes
@@ -181,6 +263,17 @@
     2.  DFR :: iTh
 4.  BoW :: Given a set of documents, allows you to rank them
 5.  RMF :: Benefit over Traditional BL is IaR
+    Exploits SCP
+6.  SBM :: Gives us Logical Operators in our search queries
+    But lacks the notion of ranking.
+7.  RS :: The higher the RS, the more relevant.
+8.  Hm :: Combinations of Dm, Sm and IR to narrow down the SS with Dm then use Sm on a smaller SS for better accuracy.
+9.  SPR :: Assigns 2 probabilities to the methods in the execution traces:
+    
+    1.  One indicates the probability of the method to exercise the feature; and
+    2.  the other NOT to.
+    
+    Based on these probabilities, the method is classified as either relevant or irrelevant.
 
 
 # Uses
@@ -220,7 +313,7 @@
 3.  Dm
 4.  Sm
 5.  IR Methods
-6.  Hybrid methods
+6.  Hm
 7.  SBM
 8.  VSM
 9.  DFR
@@ -256,4 +349,13 @@
 33. AQR using the RM.
 34. The PrpA to QR for SCR
 35. Wf
+
+
+# M for NL DR
+
+-   **SBM:** DR is performed on the basis of presense of qW in the C.
+
+Not indicate any word more important than others, makes any logical query possible.
+
+-   **SBM:** Bool Logic & Set Theory
 
