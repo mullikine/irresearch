@@ -59,9 +59,9 @@ Large and changing
 * Models
 1. QRM :: Query Reformulation Model
 2. SBM :: Standard Boolean Model
-3. VSM :: Vector Space Model
-
-   BoWM :: Bag of Words Model
+3. 
+   1. VSM :: Vector Space Model
+   2. BoWM :: Bag of Words Model
 4. TFIM :: TF-IDF Models
 5. TFIRM :: TF-IDF Retrieval Models
 6. UM :: Unigram Model
@@ -79,9 +79,9 @@ Large and changing
 4. LSI :: Latent Semantic Indexing
 5. ABL :: Automatic Bug Localisation
 6. m :: method
-7. Hm :: Hybrid method
-
-         Hybrid approach
+7. 
+   1. Hm :: Hybrid method
+   2.       Hybrid approach
 8. SS :: Search Space
 9. SPR :: Scenario-based Probabilistic Ranking
 10. FCA :: Formal Concept Analysis
@@ -95,8 +95,9 @@ Large and changing
 18. BL :: Bug Localisation
 19. QR :: Query Reformulation
 20. QRM :: Query Reformulation Model
-21. SCR :: Source Code Retrieval
-    CS :: Code Search
+21. 
+    1. SCR :: Source Code Retrieval
+    2. CS :: Code Search
 22. Dm :: Dynamic methods
        :: Dynamic methods
 23. Sm :: Static methods
@@ -111,9 +112,9 @@ Large and changing
 28. DFR :: Divergence From Randomness
 29. TFIM :: TF-IDF Models
 30. TFIRM :: TF-IDF Retrieval Models
-31. BF :: Bayesian framework
-
-    PF :: Probabilistic framework
+31. 
+    1. BF :: Bayesian framework
+    2. PF :: Probabilistic framework
 32. ICN :: Information Content Normalisation
 33. DLN :: Document Length Normalisation
 34. UM :: Unigram Model
@@ -128,9 +129,9 @@ Large and changing
 43. P1 :: Probability 1
 44. P2 :: Probability 2
 45. VH :: Version Histories
-46. Pr :: Priors
-
-    PP / PrP :: Prior Probabilities
+46. 
+    1. Pr :: Priors
+    2. PP / PrP :: Prior Probabilities
 47. D+M :: Defect + Modification
 48. TD :: Temporal Decay
 49. DPr :: Document Priors
