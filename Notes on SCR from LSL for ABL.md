@@ -17,7 +17,7 @@
 
 <tr>
 <td class="org-left">**Date**</td>
-<td class="org-left">2018-03-27 00:41:00</td>
+<td class="org-left">2018-03-27 00:45:50</td>
 </tr>
 </tbody>
 </table>
@@ -126,16 +126,16 @@ Large and changing
 
 # Models
 
-1.  QRM :: Query Reformulation Model
-2.  SBM :: Standard Boolean Model
+1.  + QRM :: Query Reformulation Model
+2.  + SBM :: Standard Boolean Model
 3.  -   **VSM:** Vector Space Model
     -   **BoWM:** Bag of Words Model
-4.  TFIM :: TF-IDF Models
-5.  TFIRM :: TF-IDF Retrieval Models
-6.  UM :: Unigram Model
-7.  PTM :: Probabilistic Topic Models
-8.  LM :: Lanugage Model
-9.  RM :: Retrieval Models
+4.  + TFIM :: TF-IDF Models
+5.  + TFIRM :: TF-IDF Retrieval Models
+6.  + UM :: Unigram Model
+7.  + PTM :: Probabilistic Topic Models
+8.  + LM :: Lanugage Model
+9.  + RM :: Retrieval Models
 10. LM + BoWM = Unigram Model
 11. MHbP Model
 12. HDbP Model
@@ -143,99 +143,94 @@ Large and changing
 
 # Terms
 
-1.  RFn :: Retrieval Function
-2.  [01] :: Boolean
-3.  LSL :: Large Software Libraries
-4.  LSI :: Latent Semantic Indexing
-5.  ABL :: Automatic Bug Localisation
-6.  m :: method / approach
-7.  Hm :: Hybrid method / Hybrid approach
-8.  SS :: Search Space
-9.  SPR :: Scenario-based Probabilistic Ranking
-10. FCA :: Formal Concept Analysis
-11. M :: Model
-12. d :: document
-13. Li :: Liklihood
-14. Prp :: Proposed by this dissertation
-15. PrpA :: Proposed Approach
-16. Ralg :: Relevance Algorithm
-17. IN :: Information Need
-18. BL :: Bug Localisation
-19. QR :: Query Reformulation
-20. QRM :: Query Reformulation Model
+1.  + RFn :: Retrieval Function
+2.  + [01] :: Boolean
+3.  + LSL :: Large Software Libraries
+4.  + LSI :: Latent Semantic Indexing
+5.  + ABL :: Automatic Bug Localisation
+6.  + m :: method / approach
+7.  + Hm :: Hybrid method / Hybrid approach
+8.  + SS :: Search Space
+9.  + SPR :: Scenario-based Probabilistic Ranking
+10. + FCA :: Formal Concept Analysis
+11. + M :: Model
+12. + d :: document
+13. + Li :: Liklihood
+14. + Prp :: Proposed by this dissertation
+15. + PrpA :: Proposed Approach
+16. + Ralg :: Relevance Algorithm
+17. + IN :: Information Need
+18. + BL :: Bug Localisation
+19. + QR :: Query Reformulation
+20. + QRM :: Query Reformulation Model
 21. -   **SCR:** Source Code Retrieval
     -   **CS:** Code Search
-22. -   **Dm:** Dynamic methods
-    -   :: Dynamic methods
-23. -   **Sm:** Static methods
-    -   Static approach
-24. IRm :: IR methods
-25. SBM :: Standard Boolean Model
+22. + Dm :: Dynamic method / approach
+23. + Sm :: Static methods / approach
+24. + IRm :: IR methods
+25. + SBM :: Standard Boolean Model
 26. -   **VSM:** Vector Space Model
     -   **BoW:** Bag of Words
     -   **BoWM:** BoW Model
-27. BoWa :: BoW assumption
-28. DFR :: Divergence From Randomness
-29. TFIM :: TF-IDF Models
-30. TFIRM :: TF-IDF Retrieval Models
+27. + BoWa :: BoW assumption
+28. + DFR :: Divergence From Randomness
+29. + TFIM :: TF-IDF Models
+30. + TFIRM :: TF-IDF Retrieval Models
 31. -   **BF:** Bayesian framework
     -   **PF:** Probabilistic framework
-32. ICN :: Information Content Normalisation
-33. DLN :: Document Length Normalisation
-34. UM :: Unigram Model
-35. PTM :: Probabilistic Topic Models
-36. MU :: Mixture of Unigrams
-37. pLSA :: Probabilistic Latent Semantic Analysis
-38. LDA :: Latent Dirichlet Allocation
-39. DR :: Document Retrieval
-40. LM :: Lanugage Modelling
-41. RM :: Retrieval Models
-42. PD :: Probability Distribution
-43. P1 :: Probability 1
-44. P2 :: Probability 2
-45. VH :: Version Histories
+32. + ICN :: Information Content Normalisation
+33. + DLN :: Document Length Normalisation
+34. + UM :: Unigram Model
+35. + PTM :: Probabilistic Topic Models
+36. + MU :: Mixture of Unigrams
+37. + pLSA :: Probabilistic Latent Semantic Analysis
+38. + LDA :: Latent Dirichlet Allocation
+39. + DR :: Document Retrieval
+40. + LM :: Lanugage Modelling
+41. + RM :: Retrieval Models
+42. + PD :: Probability Distribution
+43. + P1 :: Probability 1
+44. + P2 :: Probability 2
+45. + VH :: Version Histories
 46. -   **Pr:** Priors
     -   **PP / PrP:** Prior Probabilities
-47. D+M :: Defect + Modification
-48. TD :: Temporal Decay
-49. DPr :: Document Priors
-50. DP :: Document Preparation
-51. QR :: Query Reformulation
-52. ERF :: Explicit Relevance Feedback
-53. PRF :: Pseudo Relevance Feedback
-54. SCP :: Spacial Code Proximity
-55. rFm :: Roccio's Formula
-56. iTh :: Information Theoretic
-57. RR :: Retrieval Results
-58. RS :: Retrieval Score
-59. DRT :: Document Retrieval Techniques
-60. MRF / RMF :: Markov Random Field / Random Markov Field
-61. Wf :: Word Frequencies
-62. qW :: Query Words
-63. q :: Query
-64. IaR :: Interactive Refinement
-65. NL :: Natural Language
-66. C :: Document Collection / Text Corpus
+47. + D+M :: Defect + Modification
+48. + TD :: Temporal Decay
+49. + DPr :: Document Priors
+50. + DP :: Document Preparation
+51. + QR :: Query Reformulation
+52. + ERF :: Explicit Relevance Feedback
+53. + PRF :: Pseudo Relevance Feedback
+54. + SCP :: Spacial Code Proximity
+55. + rFm :: Roccio's Formula
+56. + iTh :: Information Theoretic
+57. + RR :: Retrieval Results
+58. + RS :: Retrieval Score
+59. + DRT :: Document Retrieval Techniques
+60. + MRF / RMF :: Markov Random Field / Random Markov Field
+61. + Wf :: Word Frequencies
+62. + qW :: Query Words
+63. + q :: Query
+64. + IaR :: Interactive Refinement
+65. + NL :: Natural Language
+66. + C :: Document Collection / Text Corpus
 
 
 # Math (get correct symbols)
 
-1.  BoW :: ∀x; x ∈ A
+1.  + BoW :: ∀x; x ∈ A
     Each d is a vector of Wf.
 
 
 # Definitions
 
-1.  P1
-    The probability of having tf occurrences of the term in the document by pure chance.
-       As this decreases, the information content of the document (vis-a-vis/in relation with) the term increases.
-2.  P2
-    (1 - P2) is related to the risk of choosing the query term as a discriminative term and works as a normalization factor.
-    
+1.  + P1 :: The probability of having tf occurrences of the term in the document by pure chance.
+    As this decreases, the information content of the document (vis-a-vis/in relation with) the term increases.
+2.  + P2 :: (1 - P2) is related to the risk of choosing the query term as a discriminative term and works as a normalization factor.
     Can be used as the probability of having one more occurrence of the term in the document, which leads to penalizting the high frequency terms during retrieval.
-3.  BoWa :: Each word is sampled independantly from the rest of the words in the document.
-4.  BoW / VSM :: A simplifying representation. Each d is a vector of Wf.
-5.  LSI :: An early retrieval method.
+3.  + BoWa :: Each word is sampled independantly from the rest of the words in the document.
+4.  + BoW / VSM :: A simplifying representation. Each d is a vector of Wf.
+5.  + LSI :: An early retrieval method.
     Assign greater importance to terms that frequently co-occur in source files.
     Can use to expand a given initial query that consists of a single query term initially.
 
@@ -251,20 +246,20 @@ Large and changing
 # Annotations
 
 1.  MFR
-2.  TF-IDF :: Still Competative
+2.  + TF-IDF :: Still Competative
 3.  DRT using BoW
-    1.  LM :: Uses a PF
-    2.  DFR :: iTh
-4.  BoW :: Given a set of documents, allows you to rank them
-5.  RMF ::
+    -   **LM:** Uses a PF
+    -   **DFR:** iTh
+4.  + BoW :: Given a set of documents, allows you to rank them
+5.  RMF
     -   Benefit over Traditional BL is IaR
     -   Exploits SCP
-6.  SBM ::
+6.  SBM
     -   Gives us Logical Operators in our search queries
     -   But lacks the notion of ranking.
-7.  RS :: The higher the RS, the more relevant.
-8.  Hm :: Combinations of Dm, Sm and IR to narrow down the SS with Dm then use Sm on a smaller SS for better accuracy.
-9.  SPR :: Assigns 2 probabilities to the methods in the execution traces:
+7.  + RS :: The higher the RS, the more relevant.
+8.  + Hm :: Combinations of Dm, Sm and IR to narrow down the SS with Dm then use Sm on a smaller SS for better accuracy.
+9.  + SPR :: Assigns 2 probabilities to the methods in the execution traces:
     
     1.  One indicates the probability of the method to exercise the feature; and
     2.  the other NOT to.
