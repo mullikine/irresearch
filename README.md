@@ -1,3 +1,7 @@
+
+
+# IR Research Project 2018
+
 <div class="outline-2" id="meta">
 
 <table>
@@ -16,16 +20,13 @@
 
 
 <tr>
-<td class="org-left">**Date**</td>
-<td class="org-left">2018-03-27 00:04:05</td>
+<td class="org-left">**Last Updated**</td>
+<td class="org-left">2018-03-27 00:06:18</td>
 </tr>
 </tbody>
 </table>
 
 </div>
-
-
-# Information Retrieval Research Project 2018
 
 
 ## Project Links

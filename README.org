@@ -8,11 +8,11 @@
 #+AUTHOR: Shane Mulligan
 #+EMAIL: mailto:mullikine@gmail.com
 
+* IR Research Project 2018
+
 #+HTML: <div class="outline-2" id="meta">
 | *Author* | {{{author}}} ({{{email}}})    |
-| *Date*   | {{{time(%Y-%m-%d %H:%M:%S)}}} |
+| *Last Updated* | {{{time(%Y-%m-%d %H:%M:%S)}}} |
 #+HTML: </div>
-
-* Information Retrieval Research Project 2018
 
 #+INCLUDE: "~/dump/home/shane/notes2018/ws/github/mullikine/irresearch/links.org" 
