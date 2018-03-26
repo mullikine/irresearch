@@ -17,7 +17,7 @@
 
 <tr>
 <td class="org-left">**Date**</td>
-<td class="org-left">2018-03-26 16:06:08</td>
+<td class="org-left">2018-03-26 16:09:43</td>
 </tr>
 </tbody>
 </table>
@@ -28,6 +28,11 @@
 # Project Links
 
 1.  [GitHub - mullikine/irresearch](https://github.com/mullikine/irresearch/)
+
+
+# Reading
+
+[Source Code Retrieval from Large Software Libraries for Automatic Bug Localization (2013) Bunyamin Sisman, Purdue University](https://docs.lib.purdue.edu/open_access_dissertations/66/)
 
 
 # Org-Mode Documents
