@@ -17,7 +17,7 @@
 
 <tr>
 <td class="org-left">**Date**</td>
-<td class="org-left">2018-03-27 00:32:26</td>
+<td class="org-left">2018-03-27 00:41:00</td>
 </tr>
 </tbody>
 </table>
@@ -128,9 +128,8 @@ Large and changing
 
 1.  QRM :: Query Reformulation Model
 2.  SBM :: Standard Boolean Model
-3.  VSM :: Vector Space Model
-    
-    BoWM :: Bag of Words Model
+3.  -   **VSM:** Vector Space Model
+    -   **BoWM:** Bag of Words Model
 4.  TFIM :: TF-IDF Models
 5.  TFIRM :: TF-IDF Retrieval Models
 6.  UM :: Unigram Model
@@ -149,10 +148,8 @@ Large and changing
 3.  LSL :: Large Software Libraries
 4.  LSI :: Latent Semantic Indexing
 5.  ABL :: Automatic Bug Localisation
-6.  m :: method
-7.  Hm :: Hybrid method
-    
-    Hybrid approach
+6.  m :: method / approach
+7.  Hm :: Hybrid method / Hybrid approach
 8.  SS :: Search Space
 9.  SPR :: Scenario-based Probabilistic Ranking
 10. FCA :: Formal Concept Analysis
@@ -166,25 +163,23 @@ Large and changing
 18. BL :: Bug Localisation
 19. QR :: Query Reformulation
 20. QRM :: Query Reformulation Model
-21. SCR :: Source Code Retrieval
-    CS :: Code Search
-22. Dm :: Dynamic methods
-    :: Dynamic methods
-23. Sm :: Static methods
-    Static approach
+21. -   **SCR:** Source Code Retrieval
+    -   **CS:** Code Search
+22. -   **Dm:** Dynamic methods
+    -   :: Dynamic methods
+23. -   **Sm:** Static methods
+    -   Static approach
 24. IRm :: IR methods
 25. SBM :: Standard Boolean Model
-26. VSM :: Vector Space Model
-    BoW :: Bag of Words
-    
-    BoWM :: BoW Model
+26. -   **VSM:** Vector Space Model
+    -   **BoW:** Bag of Words
+    -   **BoWM:** BoW Model
 27. BoWa :: BoW assumption
 28. DFR :: Divergence From Randomness
 29. TFIM :: TF-IDF Models
 30. TFIRM :: TF-IDF Retrieval Models
-31. BF :: Bayesian framework
-    
-    PF :: Probabilistic framework
+31. -   **BF:** Bayesian framework
+    -   **PF:** Probabilistic framework
 32. ICN :: Information Content Normalisation
 33. DLN :: Document Length Normalisation
 34. UM :: Unigram Model
@@ -199,9 +194,8 @@ Large and changing
 43. P1 :: Probability 1
 44. P2 :: Probability 2
 45. VH :: Version Histories
-46. Pr :: Priors
-    
-    PP / PrP :: Prior Probabilities
+46. -   **Pr:** Priors
+    -   **PP / PrP:** Prior Probabilities
 47. D+M :: Defect + Modification
 48. TD :: Temporal Decay
 49. DPr :: Document Priors
@@ -262,10 +256,12 @@ Large and changing
     1.  LM :: Uses a PF
     2.  DFR :: iTh
 4.  BoW :: Given a set of documents, allows you to rank them
-5.  RMF :: Benefit over Traditional BL is IaR
-    Exploits SCP
-6.  SBM :: Gives us Logical Operators in our search queries
-    But lacks the notion of ranking.
+5.  RMF ::
+    -   Benefit over Traditional BL is IaR
+    -   Exploits SCP
+6.  SBM ::
+    -   Gives us Logical Operators in our search queries
+    -   But lacks the notion of ranking.
 7.  RS :: The higher the RS, the more relevant.
 8.  Hm :: Combinations of Dm, Sm and IR to narrow down the SS with Dm then use Sm on a smaller SS for better accuracy.
 9.  SPR :: Assigns 2 probabilities to the methods in the execution traces:
@@ -299,11 +295,11 @@ Large and changing
 
 1.  Traditional BL Methods
     1.  SCA :: Static Code Analysis
-        Need a call graph.
-        Can't deal with non-executable files.
+        -   Need a call graph.
+        -   Can't deal with non-executable files.
     2.  Dynamic :: Test cases / Debugger
-        Can't make an exhaustive set.
-        Also, can't deal with non-executable files.
+        -   Can't make an exhaustive set.
+        -   Also, can't deal with non-executable files.
 
 
 # Outline
