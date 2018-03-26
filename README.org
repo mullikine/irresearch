@@ -1,3 +1,5 @@
 #+INCLUDE: "~/dump/home/shane/notes2018/ws/github/mullikine/irresearch/links.org" 
 
-[[https://github.com/mullikine/irresearch/blob/master/Repository_Hosting_Services_research.org][Look into APIs for accessing Repository Hosting Services]]
+* Org-Mode Documents
+1. [[file:Repository_Hosting_Services_research.org][Look into APIs for accessing Repository Hosting Services]]
+2. [[file:Notes on SCR from LSL for ABL.org][Notes on SCR from LSL for ABL]]
