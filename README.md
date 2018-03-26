@@ -2,8 +2,8 @@
 # Links
 
 1.  [GitHub - mullikine/irresearch](https://github.com/mullikine/irresearch/)
-2.  [Notes on SCR from LSL for ABL](http://htmlpreview.github.com/?https://github.com/mullikine/irresearch/blob/master/Notes%2520on%2520SCR%2520from%2520LSL%2520for%2520ABL.html)
-3.  [Repository Hosting Services research](http://htmlpreview.github.com/?https://github.com/mullikine/irresearch/blob/master/Repository_Hosting_Services_research.html)
+2.  [Notes on SCR from LSL for ABL](http://htmlpreview.github.com/?https://raw.githubusercontent.com/mullikine/irresearch/master/Notes%2520on%2520SCR%2520from%2520LSL%2520for%2520ABL.html)
+3.  [Repository Hosting Services research](http://htmlpreview.github.com/?https://raw.githubusercontent.com/mullikine/irresearch/master/Repository_Hosting_Services_research.html)
 
 <div class="outline-2" id="meta">
 
@@ -24,7 +24,7 @@
 
 <tr>
 <td class="org-left">**Date**</td>
-<td class="org-left">2018-03-26 15:33:52</td>
+<td class="org-left">2018-03-26 15:35:12</td>
 </tr>
 </tbody>
 </table>
@@ -160,7 +160,7 @@ Results
 
 ## Repository Hosting Services
 
-<table id="orgdbe0e4e">
+<table id="org733f5da">
 
 
 <colgroup>
@@ -282,7 +282,7 @@ Results
 
 ## Code Search Servers
 
-<table id="org509e4bc">
+<table id="org129a4be">
 
 
 <colgroup>

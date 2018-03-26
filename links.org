@@ -1,4 +1,4 @@
 * Links
 1. [[https://github.com/mullikine/irresearch/][GitHub - mullikine/irresearch]]
-2. [[http://htmlpreview.github.com/?https://github.com/mullikine/irresearch/blob/master/Notes%2520on%2520SCR%2520from%2520LSL%2520for%2520ABL.html][Notes on SCR from LSL for ABL]]
-3. [[http://htmlpreview.github.com/?https://github.com/mullikine/irresearch/blob/master/Repository_Hosting_Services_research.html][Repository Hosting Services research]]
+2. [[http://htmlpreview.github.com/?https://raw.githubusercontent.com/mullikine/irresearch/master/Notes%2520on%2520SCR%2520from%2520LSL%2520for%2520ABL.html][Notes on SCR from LSL for ABL]]
+3. [[http://htmlpreview.github.com/?https://raw.githubusercontent.com/mullikine/irresearch/master/Repository_Hosting_Services_research.html][Repository Hosting Services research]]
