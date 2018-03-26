@@ -17,7 +17,7 @@
 
 <tr>
 <td class="org-left">**Date**</td>
-<td class="org-left">2018-03-26 23:59:46</td>
+<td class="org-left">2018-03-27 00:00:42</td>
 </tr>
 </tbody>
 </table>
@@ -25,19 +25,22 @@
 </div>
 
 
-# Project Links
+# Information Retrieval Research Project 2018
+
+
+## Project Links
 
 1.  [GitHub - mullikine/irresearch](https://github.com/mullikine/irresearch/)
 
 
-# Reading
+## Reading
 
 1.  [SCR from LSL for ABL Localization (2013) Bunyamin Sisman, Purdue University](https://docs.lib.purdue.edu/open_access_dissertations/66/)
     
     [Notes](Notes%20on%20SCR%20from%20LSL%20for%20ABL.md) [(html)](http://htmlpreview.github.com/?https://github.com/mullikine/irresearch/blob/master/Notes%20on%20SCR%20from%20LSL%20for%20ABL.html)
 
 
-# Research
+## Research
 
 1.  Look into APIs for accessing Repository Hosting Services
     
