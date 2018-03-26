@@ -1,3 +1,8 @@
+[GitHub - mullikine/irresearch](https://github.com/mullikine/irresearch/)
+
+[Notes on SCR from LSL for ABL](http://htmlpreview.github.com/?https://github.com/mullikine/irresearch/blob/master/Notes%2520on%2520SCR%2520from%2520LSL%2520for%2520ABL.html)
+[Repository Hosting Services research](http://htmlpreview.github.com/?https://github.com/mullikine/irresearch/blob/master/Repository_Hosting_Services_research.html)
+
 <div class="outline-2" id="meta">
 
 <table>
@@ -17,7 +22,7 @@
 
 <tr>
 <td class="org-left">**Date**</td>
-<td class="org-left">2018-03-26 15:20:54</td>
+<td class="org-left">2018-03-26 15:32:34</td>
 </tr>
 </tbody>
 </table>
@@ -153,7 +158,7 @@ Results
 
 ## Repository Hosting Services
 
-<table id="org16a95d1">
+<table id="org4e39761">
 
 
 <colgroup>
@@ -275,7 +280,7 @@ Results
 
 ## Code Search Servers
 
-<table id="org71f7080">
+<table id="org662ccc4">
 
 
 <colgroup>
@@ -1066,6 +1071,7 @@ Generate Python files AST
 51. DRT :: Document Retrieval Techniques
 52. MRF / RMF :: Markov Random Field / Random Markov Field
 53. Wf :: Word Frequencies
+54. IaR :: Interactive Refinement
 
 
 # Math (get correct symbols)
@@ -1103,6 +1109,7 @@ Generate Python files AST
     1.  LM :: Uses a PF
     2.  DFR :: iTh
 4.  BoW :: Given a set of documents, allows you to rank them
+5.  RMF :: Benefit over Traditional BL is IaR
 
 
 # Uses
