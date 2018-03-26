@@ -1,14 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<!-- 2018-03-26 Mon 14:39 -->
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>&lrm;</title>
-<meta name="generator" content="Org mode" />
-<meta name="author" content="shane" />
+<!-- 2018-03-27 Tue 00:11 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Notes taken from "Source Code Retrieval from Large Software Libraries for Automatic.pdf"</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="Shane Mulligan">
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center;
@@ -180,6 +178,8 @@
   .org-svg { width: 90%; }
   /*]]>*/-->
 </style>
+<link href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Inconsolata:400,700" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -251,49 +251,47 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<div id="table-of-contents">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents">
-<ul>
-<li><a href="#org0b8d322">1. External</a></li>
-<li><a href="#orgecb78a5">2. Refactorings</a></li>
-<li><a href="#orgf8cbe5d">3. Prp Method in this Dissertation:</a>
-<ul>
-<li><a href="#org2be931b">3.1. Apparatus</a></li>
-<li><a href="#orgdbf23e7">3.2. Steps</a></li>
-</ul>
-</li>
-<li><a href="#orgab5786d">4. Ambiguous Terms</a></li>
-<li><a href="#org9721d03">5. Models</a></li>
-<li><a href="#org2b38692">6. Terms</a></li>
-<li><a href="#org726b4e0">7. Math (get correct symbols)</a></li>
-<li><a href="#orgc6386be">8. Definitions</a></li>
-<li><a href="#org84c50c9">9. Notes</a></li>
-<li><a href="#org2445132">10. Annotations</a></li>
-<li><a href="#org103dd03">11. Uses</a></li>
-<li><a href="#org0a63e03">12. Problem =&gt; Solution</a></li>
-<li><a href="#org289e631">13. IN</a></li>
-<li><a href="#orgacf8da6">14. Outline</a></li>
-<li><a href="#org0687f52">15. Outline</a></li>
-</ul>
+<h1 class="title">Notes taken from "Source Code Retrieval from Large Software Libraries for Automatic.pdf"</h1>
+<div class="outline-2" id="meta">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left"><b>Author</b></td>
+<td class="org-left">Shane Mulligan (<a href="mailto:mullikine@gmail.com">mailto:mullikine@gmail.com</a>)</td>
+</tr>
+
+<tr>
+<td class="org-left"><b>Date</b></td>
+<td class="org-left">2018-03-27 00:11:01</td>
+</tr>
+</tbody>
+</table>
 </div>
-</div>
-<div id="outline-container-org0b8d322" class="outline-2">
-<h2 id="org0b8d322"><span class="section-number-2">1</span> External</h2>
+
+<div id="outline-container-orgf54c92e" class="outline-2">
+<h2 id="orgf54c92e"><span class="section-number-2">1</span> External</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 <a href="file:///home/shane/dump/home/shane/notes2017/uni/cosc/480-project_FY/research/Source%20Code%20Retrieval%20from%20Large%20Software%20Libraries%20for%20Automatic.pdf">SCR from LSL for ABL.pdf</a>
 </p>
 
 <div class="org-src-container">
-<pre class="src src-bash">z <span style="color: #e9b96e;">"$DUMP$HOME/notes2018/uni/cosc/480-project_FY/research/Source Code Retrieval from Large Software Libraries for Automatic.pdf"</span>
+<pre class="src src-bash">z <span style="color: #ffa07a;">"$DUMP$HOME/notes2018/uni/cosc/480-project_FY/research/Source Code Retrieval from Large Software Libraries for Automatic.pdf"</span>
+sp <span style="color: #ffa07a;">"$DUMP$HOME/notes2018/uni/cosc/480-project_FY/research/Source Code Retrieval from Large Software Libraries for Automatic.txt"</span>
 </pre>
 </div>
 </div>
 </div>
 
-<div id="outline-container-orgecb78a5" class="outline-2">
-<h2 id="orgecb78a5"><span class="section-number-2">2</span> Refactorings</h2>
+<div id="outline-container-org70c212b" class="outline-2">
+<h2 id="org70c212b"><span class="section-number-2">2</span> Refactorings</h2>
 <div class="outline-text-2" id="text-2">
 <ol class="org-ol">
 <li>parens to def :: '&lt;,'&gt;s/\(.*\)(\(.*\))/\1:: \2/g</li>
@@ -301,22 +299,82 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-orgf8cbe5d" class="outline-2">
-<h2 id="orgf8cbe5d"><span class="section-number-2">3</span> Prp Method in this Dissertation:</h2>
+<div id="outline-container-org269ad80" class="outline-2">
+<h2 id="org269ad80"><span class="section-number-2">3</span> Notation</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-org2be931b" class="outline-3">
-<h3 id="org2be931b"><span class="section-number-3">3.1</span> Apparatus</h3>
+<div id="outline-container-org53fa3ab" class="outline-3">
+<h3 id="org53fa3ab"><span class="section-number-3">3.1</span> SBM</h3>
 <div class="outline-text-3" id="text-3-1">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">symbol</th>
+<th scope="col" class="org-left">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">F</td>
+<td class="org-left">RFn</td>
+</tr>
+
+<tr>
+<td class="org-left">Q</td>
+<td class="org-left">[01] statement about a query</td>
+</tr>
+
+<tr>
+<td class="org-left">B</td>
+<td class="org-left">[01] algebra over a set of words</td>
+</tr>
+
+<tr>
+<td class="org-left">d</td>
+<td class="org-left">[01] rep. of a d in the C</td>
+</tr>
+
+<tr>
+<td class="org-left">q<sub>i</sub></td>
+<td class="org-left">[01] rep. of i<sup>th</sup> word in a q</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0ddb003" class="outline-2">
+<h2 id="org0ddb003"><span class="section-number-2">4</span> Prp Method in this Dissertation:</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org9cb97b8" class="outline-3">
+<h3 id="org9cb97b8"><span class="section-number-3">4.1</span> Domain</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+Large and changing
+</p>
+</div>
+</div>
+<div id="outline-container-org8e1e210" class="outline-3">
+<h3 id="org8e1e210"><span class="section-number-3">4.2</span> Apparatus</h3>
+<div class="outline-text-3" id="text-4-2">
 <ol class="org-ol">
 <li>BF</li>
 <li>QRM</li>
 </ol>
 </div>
 </div>
-<div id="outline-container-orgdbf23e7" class="outline-3">
-<h3 id="orgdbf23e7"><span class="section-number-3">3.2</span> Steps</h3>
-<div class="outline-text-3" id="text-3-2">
+<div id="outline-container-org7eeb0bb" class="outline-3">
+<h3 id="org7eeb0bb"><span class="section-number-3">4.3</span> Steps</h3>
+<div class="outline-text-3" id="text-4-3">
 <ol class="org-ol">
 <li>Create BF &#x2013; Predict Bug Li</li>
 <li>Describe QR Model
@@ -327,11 +385,11 @@ PRF with SCP</li>
 </div>
 </div>
 
-<div id="outline-container-orgab5786d" class="outline-2">
-<h2 id="orgab5786d"><span class="section-number-2">4</span> Ambiguous Terms</h2>
-<div class="outline-text-2" id="text-4">
+<div id="outline-container-org0dcbd69" class="outline-2">
+<h2 id="org0dcbd69"><span class="section-number-2">5</span> Ambiguous Terms</h2>
+<div class="outline-text-2" id="text-5">
 <ol class="org-ol">
-<li>DR :: dimensionality reduction</li>
+<li><b>DR</b> :: dimensionality reduction</li>
 <li><p>
 LT :: Linear Transformation techniques
 </p>
@@ -341,16 +399,16 @@ Commonly used for DR
 </p>
 
 <ol class="org-ol">
-<li>LDA :: Linear Discriminant Analysis</li>
+<li><b>LDA</b> :: Linear Discriminant Analysis</li>
 <li>PCA :: Principal Component Analysis</li>
 </ol></li>
 </ol>
 </div>
 </div>
 
-<div id="outline-container-org9721d03" class="outline-2">
-<h2 id="org9721d03"><span class="section-number-2">5</span> Models</h2>
-<div class="outline-text-2" id="text-5">
+<div id="outline-container-orge833f11" class="outline-2">
+<h2 id="orge833f11"><span class="section-number-2">6</span> Models</h2>
+<div class="outline-text-2" id="text-6">
 <ol class="org-ol">
 <li>QRM :: Query Reformulation Model</li>
 <li>SBM :: Standard Boolean Model</li>
@@ -369,13 +427,21 @@ BoWM :: Bag of Words Model</li>
 </div>
 </div>
 
-<div id="outline-container-org2b38692" class="outline-2">
-<h2 id="org2b38692"><span class="section-number-2">6</span> Terms</h2>
-<div class="outline-text-2" id="text-6">
+<div id="outline-container-orgf37c2c2" class="outline-2">
+<h2 id="orgf37c2c2"><span class="section-number-2">7</span> Terms</h2>
+<div class="outline-text-2" id="text-7">
 <ol class="org-ol">
+<li>RFn :: Retrieval Function</li>
+<li>[01] :: Boolean</li>
 <li>LSL :: Large Software Libraries</li>
+<li>LSI :: Latent Semantic Indexing</li>
 <li>ABL :: Automatic Bug Localisation</li>
 <li>m :: method</li>
+<li>Hm :: Hybrid method
+Hybrid approach</li>
+<li>SS :: Search Space</li>
+<li>SPR :: Scenario-based Probabilistic Ranking</li>
+<li>FCA :: Formal Concept Analysis</li>
 <li>M :: Model</li>
 <li>d :: document</li>
 <li>Li :: Liklihood</li>
@@ -388,8 +454,10 @@ BoWM :: Bag of Words Model</li>
 <li>QRM :: Query Reformulation Model</li>
 <li>SCR :: Source Code Retrieval
 CS :: Code Search</li>
-<li>Dm :: Dynamic methods</li>
-<li>Sm :: Static methods</li>
+<li>Dm :: Dynamic methods
+:: Dynamic methods</li>
+<li>Sm :: Static methods
+Static approach</li>
 <li>IRm :: IR methods</li>
 <li>SBM :: Standard Boolean Model</li>
 <li>VSM :: Vector Space Model
@@ -428,16 +496,22 @@ PP / PrP :: Prior Probabilities</li>
 <li>rFm :: Roccio's Formula</li>
 <li>iTh :: Information Theoretic</li>
 <li>RR :: Retrieval Results</li>
+<li>RS :: Retrieval Score</li>
 <li>DRT :: Document Retrieval Techniques</li>
 <li>MRF / RMF :: Markov Random Field / Random Markov Field</li>
 <li>Wf :: Word Frequencies</li>
+<li>qW :: Query Words</li>
+<li>q :: Query</li>
+<li>IaR :: Interactive Refinement</li>
+<li>NL :: Natural Language</li>
+<li>C :: Document Collection / Text Corpus</li>
 </ol>
 </div>
 </div>
 
-<div id="outline-container-org726b4e0" class="outline-2">
-<h2 id="org726b4e0"><span class="section-number-2">7</span> Math (get correct symbols)</h2>
-<div class="outline-text-2" id="text-7">
+<div id="outline-container-orgff5846b" class="outline-2">
+<h2 id="orgff5846b"><span class="section-number-2">8</span> Math (get correct symbols)</h2>
+<div class="outline-text-2" id="text-8">
 <ol class="org-ol">
 <li>BoW :: ∀x; x ∈ A
 Each d is a vector of Wf.</li>
@@ -445,9 +519,9 @@ Each d is a vector of Wf.</li>
 </div>
 </div>
 
-<div id="outline-container-orgc6386be" class="outline-2">
-<h2 id="orgc6386be"><span class="section-number-2">8</span> Definitions</h2>
-<div class="outline-text-2" id="text-8">
+<div id="outline-container-orge33adfd" class="outline-2">
+<h2 id="orge33adfd"><span class="section-number-2">9</span> Definitions</h2>
+<div class="outline-text-2" id="text-9">
 <ol class="org-ol">
 <li>P1
 The probability of having tf occurrences of the term in the document by pure chance.
@@ -462,13 +536,16 @@ Can be used as the probability of having one more occurrence of the term in the 
 </p></li>
 <li>BoWa :: Each word is sampled independantly from the rest of the words in the document.</li>
 <li>BoW / VSM :: A simplifying representation. Each d is a vector of Wf.</li>
+<li>LSI :: An early retrieval method.
+Assign greater importance to terms that frequently co-occur in source files.
+Can use to expand a given initial query that consists of a single query term initially.</li>
 </ol>
 </div>
 </div>
 
-<div id="outline-container-org84c50c9" class="outline-2">
-<h2 id="org84c50c9"><span class="section-number-2">9</span> Notes</h2>
-<div class="outline-text-2" id="text-9">
+<div id="outline-container-orgbc7e5db" class="outline-2">
+<h2 id="orgbc7e5db"><span class="section-number-2">10</span> Notes</h2>
+<div class="outline-text-2" id="text-10">
 <ol class="org-ol">
 <li>Ignore structure but perform well:
 <ol class="org-ol">
@@ -480,9 +557,9 @@ Can be used as the probability of having one more occurrence of the term in the 
 </div>
 </div>
 
-<div id="outline-container-org2445132" class="outline-2">
-<h2 id="org2445132"><span class="section-number-2">10</span> Annotations</h2>
-<div class="outline-text-2" id="text-10">
+<div id="outline-container-org98c3862" class="outline-2">
+<h2 id="org98c3862"><span class="section-number-2">11</span> Annotations</h2>
+<div class="outline-text-2" id="text-11">
 <ol class="org-ol">
 <li>MFR</li>
 <li>TF-IDF :: Still Competative</li>
@@ -492,31 +569,48 @@ Can be used as the probability of having one more occurrence of the term in the 
 <li>DFR :: iTh</li>
 </ol></li>
 <li>BoW :: Given a set of documents, allows you to rank them</li>
+<li>RMF :: Benefit over Traditional BL is IaR
+Exploits SCP</li>
+<li>SBM :: Gives us Logical Operators in our search queries
+But lacks the notion of ranking.</li>
+<li>RS :: The higher the RS, the more relevant.</li>
+<li>Hm :: Combinations of Dm, Sm and IR to narrow down the SS with Dm then use Sm on a smaller SS for better accuracy.</li>
+<li><p>
+SPR :: Assigns 2 probabilities to the methods in the execution traces:
+</p>
+<ol class="org-ol">
+<li>One indicates the probability of the method to exercise the feature; and</li>
+<li>the other NOT to.</li>
+</ol>
+
+<p>
+Based on these probabilities, the method is classified as either relevant or irrelevant.
+</p></li>
 </ol>
 </div>
 </div>
 
-<div id="outline-container-org103dd03" class="outline-2">
-<h2 id="org103dd03"><span class="section-number-2">11</span> Uses</h2>
-<div class="outline-text-2" id="text-11">
+<div id="outline-container-orgb9d7e32" class="outline-2">
+<h2 id="orgb9d7e32"><span class="section-number-2">12</span> Uses</h2>
+<div class="outline-text-2" id="text-12">
 <ol class="org-ol">
 <li>Bug report is used as a query</li>
 </ol>
 </div>
 </div>
 
-<div id="outline-container-org0a63e03" class="outline-2">
-<h2 id="org0a63e03"><span class="section-number-2">12</span> Problem =&gt; Solution</h2>
-<div class="outline-text-2" id="text-12">
+<div id="outline-container-org5a19f98" class="outline-2">
+<h2 id="org5a19f98"><span class="section-number-2">13</span> Problem =&gt; Solution</h2>
+<div class="outline-text-2" id="text-13">
 <ol class="org-ol">
 <li>MRF =&gt; IR defect, Loss of inter-term relationships in documents</li>
 </ol>
 </div>
 </div>
 
-<div id="outline-container-org289e631" class="outline-2">
-<h2 id="org289e631"><span class="section-number-2">13</span> IN</h2>
-<div class="outline-text-2" id="text-13">
+<div id="outline-container-orgbf3c62a" class="outline-2">
+<h2 id="orgbf3c62a"><span class="section-number-2">14</span> IN</h2>
+<div class="outline-text-2" id="text-14">
 <ol class="org-ol">
 <li>Concept Localisation</li>
 <li>Bug Localisation</li>
@@ -527,9 +621,9 @@ Can be used as the probability of having one more occurrence of the term in the 
 </div>
 </div>
 
-<div id="outline-container-orgacf8da6" class="outline-2">
-<h2 id="orgacf8da6"><span class="section-number-2">14</span> Outline</h2>
-<div class="outline-text-2" id="text-14">
+<div id="outline-container-orgcc7c638" class="outline-2">
+<h2 id="orgcc7c638"><span class="section-number-2">15</span> Outline</h2>
+<div class="outline-text-2" id="text-15">
 <ol class="org-ol">
 <li>Traditional BL Methods
 <ol class="org-ol">
@@ -544,16 +638,16 @@ Also, can't deal with non-executable files.</li>
 </div>
 </div>
 
-<div id="outline-container-org0687f52" class="outline-2">
-<h2 id="org0687f52"><span class="section-number-2">15</span> Outline</h2>
-<div class="outline-text-2" id="text-15">
+<div id="outline-container-org6916a64" class="outline-2">
+<h2 id="org6916a64"><span class="section-number-2">16</span> Outline</h2>
+<div class="outline-text-2" id="text-16">
 <ol class="org-ol">
 <li>IR for BL</li>
 <li>Organisation of this dissertation</li>
 <li>Dm</li>
 <li>Sm</li>
 <li>IR Methods</li>
-<li>Hybrid methods</li>
+<li>Hm</li>
 <li>SBM</li>
 <li>VSM</li>
 <li>DFR
@@ -596,11 +690,21 @@ Also, can't deal with non-executable files.</li>
 </ol>
 </div>
 </div>
+
+<div id="outline-container-orgdf8c125" class="outline-2">
+<h2 id="orgdf8c125"><span class="section-number-2">17</span> M for NL DR</h2>
+<div class="outline-text-2" id="text-17">
+<dl class="org-dl">
+<dt>SBM</dt><dd>DR is performed on the basis of presense of qW in the C.</dd>
+</dl>
+<p>
+Not indicate any word more important than others, makes any logical query possible.
+</p>
+<dl class="org-dl">
+<dt>SBM</dt><dd>Bool Logic &amp; Set Theory</dd>
+</dl>
 </div>
-<div id="postamble" class="status">
-<p class="author">Author: shane</p>
-<p class="date">Created: 2018-03-26 Mon 14:39</p>
-<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
 </div>
 </body>
 </html>
