@@ -2,4 +2,4 @@
 
 * Org-Mode Documents
 1. [[file:Repository_Hosting_Services_research.org][Look into APIs for accessing Repository Hosting Services]]
-2. [[file:Notes on SCR from LSL for ABL.org][Notes on SCR from LSL for ABL]]
+2. [[file:Notes%20on%20SCR%20from%20LSL%20for%20ABL.org][Notes on SCR from LSL for ABL]]
