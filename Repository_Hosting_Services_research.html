@@ -1,0 +1,1366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2018-03-26 Mon 14:39 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Look into APIs for accessing Repository Hosting Services</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="Shane Mulligan">
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Inconsolata:400,700" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Look into APIs for accessing Repository Hosting Services</h1>
+<div class="outline-2" id="meta">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left"><b>Author</b></td>
+<td class="org-left">Shane Mulligan (<a href="mailto:mullikine@gmail.com">mailto:mullikine@gmail.com</a>)</td>
+</tr>
+
+<tr>
+<td class="org-left"><b>Date</b></td>
+<td class="org-left">2018-03-26 14:39:41</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div id="outline-container-orgfb345b6" class="outline-2">
+<h2 id="orgfb345b6"><span class="section-number-2">1</span> Questions/Answers</h2>
+<div class="outline-text-2" id="text-1">
+<ol class="org-ol">
+<li>Is Google Code [Search] still accessible through an API? <a href="https://www.programmableweb.com/news/13-google-apis-are-no-more/2011/10/19">No, The API is gone.</a></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org89c7a20" class="outline-2">
+<h2 id="org89c7a20"><span class="section-number-2">2</span> Look into software for accessing APIs</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org49320d4" class="outline-3">
+<h3 id="org49320d4"><span class="section-number-3">2.1</span> GitHub API</h3>
+<div class="outline-text-3" id="text-2-1">
+</div>
+<div id="outline-container-orgf2f2447" class="outline-4">
+<h4 id="orgf2f2447"><span class="section-number-4">2.1.1</span> apt</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<div class="org-src-container">
+<pre class="src src-bash">apt search github
+</pre>
+</div>
+
+<p>
+Results
+</p>
+<div class="org-src-container">
+<pre class="src src-text">libghc-github-dev/xenial 0.13.2-4build1 amd64
+  Haskell Github API
+
+libghc-github-doc/xenial,xenial 0.13.2-4build1 all
+  Haskell Github API; documentation
+
+libghc-github-prof/xenial 0.13.2-4build1 amd64
+  Haskell Github API; profiling libraries
+</pre>
+</div>
+</div>
+<div id="outline-container-org1427e95" class="outline-5">
+<h5 id="org1427e95"><span class="section-number-5">2.1.1.1</span> Common Lisp Github API</h5>
+<div class="outline-text-5" id="text-2-1-1-1">
+<div class="org-src-container">
+<pre class="src src-text">cl-github-v3/xenial,xenial 20130312-1 all
+  Common Lisp interface to the github V3 API
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org122c8e5" class="outline-4">
+<h4 id="org122c8e5"><span class="section-number-4">2.1.2</span> pip</h4>
+<div class="outline-text-4" id="text-2-1-2">
+<div class="org-src-container">
+<pre class="src src-bash">pip search github
+</pre>
+</div>
+
+<p>
+Results
+</p>
+<div class="org-src-container">
+<pre class="src src-text">Github-API-3-Wrapper-for-Python (0.0.1)                  - Github API 3 Wrapper for Python
+sqre-github3.py (1.0.0a4)                                - Python wrapper for the GitHub API(http://developer.github.com/v3)
+github3.py (1.0.1)                                       - Python wrapper for the GitHub API(http://developer.github.com/v3)
+sqre-codekit-github3.py (1.0.0a4)                        - Python wrapper for the GitHub API(http://developer.github.com/v3)
+githon (0.7.0)                                           - A simple Data Scraping library for GitHub REST API v3
+githubcap (0.0.0)                                        - Tool and library for interacting with GitHub API v3
+gitpanion (1.0.0.2)                                      - A module to make using the github v3 REST api in python 3 easy.
+githubpy (1.1.0)                                         - Github v3 API Python SDK
+PyGithub-requests (1.26.0)                               - Use the full Github API v3
+pygithub-redux (1.33.0)                                  - Use the full Github API v3
+PyGithub (1.38)                                          - Use the full Github API v3
+pygithub3 (0.5.1)                                        - Python wrapper for the github v3 api
+pygithub33 (0.6.2)                                       - Python wrapper for the github v3 api
+helga-github-meta (1.1.0)                                - Provide information for github related metadata
+</pre>
+</div>
+
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">package</th>
+<th scope="col" class="org-left">relevance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">helga-github-meta</td>
+<td class="org-left">High</td>
+</tr>
+
+<tr>
+<td class="org-left">githon</td>
+<td class="org-left">High</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5334d33" class="outline-3">
+<h3 id="org5334d33"><span class="section-number-3">2.2</span> GitLab API</h3>
+<div class="outline-text-3" id="text-2-2">
+</div>
+<div id="outline-container-orgcdd352c" class="outline-4">
+<h4 id="orgcdd352c"><span class="section-number-4">2.2.1</span> apt</h4>
+<div class="outline-text-4" id="text-2-2-1">
+<div class="org-src-container">
+<pre class="src src-bash">apt search gitlab
+</pre>
+</div>
+
+<p>
+Results
+</p>
+</div>
+<div id="outline-container-org1ed372a" class="outline-5">
+<h5 id="org1ed372a"><span class="section-number-5">2.2.1.1</span> Python Gitlab</h5>
+<div class="outline-text-5" id="text-2-2-1-1">
+<div class="org-src-container">
+<pre class="src src-text">python-gitlab/xenial,xenial 7.5.0-1 all
+  Python wrapper for the GitLab API (Python 2)
+
+python3-gitlab/xenial,xenial 7.5.0-1 all
+  Python wrapper for the GitLab API (Python 3)
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8c8d346" class="outline-4">
+<h4 id="org8c8d346"><span class="section-number-4">2.2.2</span> pip</h4>
+<div class="outline-text-4" id="text-2-2-2">
+<div class="org-src-container">
+<pre class="src src-bash">pip search gitlab
+</pre>
+</div>
+
+<p>
+Results
+</p>
+<div class="org-src-container">
+<pre class="src src-text">git-gitlab (0.6.0)                              - Git extension commandline for GitLab API v3
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd313062" class="outline-3">
+<h3 id="orgd313062"><span class="section-number-3">2.3</span> SourceGraph API</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+github
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">googler -w github.com -- <span style="color: #e9b96e;">"sourcegraph api"</span>
+</pre>
+</div>
+
+<p>
+Results
+</p>
+<div class="org-src-container">
+<pre class="src src-text">https://github.com/sourcegraph/go-sourcegraph
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgffcbbc9" class="outline-2">
+<h2 id="orgffcbbc9"><span class="section-number-2">3</span> <span class="todo TODO">TODO</span> overview of APIs for respository hosting services and code search servers</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+
+<div id="outline-container-org6952b8b" class="outline-3">
+<h3 id="org6952b8b"><span class="section-number-3">3.1</span> Repository Hosting Services</h3>
+<div class="outline-text-3" id="text-3-1">
+<table id="org0f132d8">
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-right">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Service</th>
+<th scope="col" class="org-left">status</th>
+<th scope="col" class="org-left">point of difference</th>
+<th scope="col" class="org-left">Domain</th>
+<th scope="col" class="org-left">API Documentation</th>
+<th scope="col" class="org-right">Version</th>
+<th scope="col" class="org-left">MetaData</th>
+<th scope="col" class="org-left">wiki</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">GitHub</td>
+<td class="org-left"><sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup> &gt; 24,377,273 users, &gt; $2 billion</td>
+<td class="org-left">Largest, Best metadata?</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="https://developer.github.com/v3/">V3 Doc</a></td>
+<td class="org-right">v3</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="https://en.wikipedia.org/wiki/GitHub">https://en.wikipedia.org/wiki/GitHub</a></td>
+</tr>
+
+<tr>
+<td class="org-left">GitLab</td>
+<td class="org-left">Used by &gt; 100,000 organizations</td>
+<td class="org-left">Continuous Integration is free</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="https://docs.gitlab.com/ee/api/README.html">Readme</a></td>
+<td class="org-right">v4</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="https://en.wikipedia.org/wiki/GitLab">https://en.wikipedia.org/wiki/GitLab</a></td>
+</tr>
+
+<tr>
+<td class="org-left">BitBucket</td>
+<td class="org-left">Online</td>
+<td class="org-left">mostly used for code and code review</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="https://developer.atlassian.com/bitbucket/api/2/reference/resource/repositories">V2 Repositories</a></td>
+<td class="org-right">2.0</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="https://en.wikipedia.org/wiki/Bitbucket">https://en.wikipedia.org/wiki/Bitbucket</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Merobase</td>
+<td class="org-left">Online</td>
+<td class="org-left"><sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup> interface-driven searches</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="https://en.wikipedia.org/wiki/Merobase">https://en.wikipedia.org/wiki/Merobase</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Krugle</td>
+<td class="org-left">active</td>
+<td class="org-left">locate open source code, and quickly share it</td>
+<td class="org-left">Apache, JavaDocs, SourceForge</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="https://en.wikipedia.org/wiki/Krugle">https://en.wikipedia.org/wiki/Krugle</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Open Hub</td>
+<td class="org-left">$565 million</td>
+<td class="org-left">licenses (including license conflict information)</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="https://github.com/blackducksoftware/ohloh_api">README</a></td>
+<td class="org-right">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="https://en.wikipedia.org/wiki/Open_Hub">https://en.wikipedia.org/wiki/Open_Hub</a></td>
+</tr>
+
+<tr>
+<td class="org-left">Google Code</td>
+<td class="org-left">archived (still accessible but not through api)</td>
+<td class="org-left">regex <sup><a id="fnr.3" class="footref" href="#fn.3">3</a></sup></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="https://code.google.com/archive/">Notice</a></td>
+<td class="org-right">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left"><a href="https://en.wikipedia.org/wiki/Google_Code_Search">https://en.wikipedia.org/wiki/Google_Code_Search</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org658e495" class="outline-3">
+<h3 id="org658e495"><span class="section-number-3">3.2</span> Code Search Servers</h3>
+<div class="outline-text-3" id="text-3-2">
+<table id="org95498fe">
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Service</th>
+<th scope="col" class="org-left">status</th>
+<th scope="col" class="org-left">point of difference</th>
+<th scope="col" class="org-left">API Documentation</th>
+<th scope="col" class="org-left">Version</th>
+<th scope="col" class="org-left">MetaData</th>
+<th scope="col" class="org-left">wiki</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">SourceGraph</td>
+<td class="org-left">Online</td>
+<td class="org-left">find, review, understand, and debug code. regex <sup><a id="fnr.4" class="footref" href="#fn.4">4</a></sup></td>
+<td class="org-left"><a href="https://about.sourcegraph.com/docs/server/api/">Server API</a>, <a href="https://sourcegraph.com/api/console">Console API</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">OpenGrok</td>
+<td class="org-left">Online</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga83394a" class="outline-2">
+<h2 id="orga83394a"><span class="section-number-2">4</span> Feature summary and comparison</h2>
+<div class="outline-text-2" id="text-4">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Feature</th>
+<th scope="col" class="org-right">OpenGrok</th>
+<th scope="col" class="org-right">GitHub/GitHub Enterprise</th>
+<th scope="col" class="org-right">SourceGraph</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Multi-repository full-text search</td>
+<td class="org-right">1</td>
+<td class="org-right">1</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-left">At any revision</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-left">Indexing delay</td>
+<td class="org-right">Hours</td>
+<td class="org-right">Varies, not instant</td>
+<td class="org-right">No index needed</td>
+</tr>
+
+<tr>
+<td class="org-left">Search commit diffs</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-left">Search commit messages</td>
+<td class="org-right">0</td>
+<td class="org-right">1</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-left">Query latency</td>
+<td class="org-right">1</td>
+<td class="org-right">1</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-left">Include/exclude paths and globs</td>
+<td class="org-right">1</td>
+<td class="org-right">0 Limited</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-left">Regular expressions</td>
+<td class="org-right">0 (wildcards only)</td>
+<td class="org-right">0</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-left">Saved searches</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-left">Doc/type hover tooltips</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-left">Code review integration</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-left">Editor integration</td>
+<td class="org-right">1</td>
+<td class="org-right">0</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-left">Web app</td>
+<td class="org-right">1</td>
+<td class="org-right">1</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-left">Integrated blame</td>
+<td class="org-right">1</td>
+<td class="org-right">0 Multiple clicks away</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-left">Nice URLs</td>
+<td class="org-right">1</td>
+<td class="org-right">1</td>
+<td class="org-right">1 (+ selection range &amp; symbols)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orga1cff43" class="outline-2">
+<h2 id="orga1cff43"><span class="section-number-2">5</span> SourceGraph API research</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-orgca2510b" class="outline-3">
+<h3 id="orgca2510b"><span class="section-number-3">5.1</span> Do these features only work for a personal SourceGraph server?</h3>
+<div class="outline-text-3" id="text-5-1">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Feature</th>
+<th scope="col" class="org-left">Paid</th>
+<th scope="col" class="org-left">url</th>
+<th scope="col" class="org-left">How</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Code Intelligence <sup><a id="fnr.5" class="footref" href="#fn.5">5</a></sup></td>
+<td class="org-left">✓</td>
+<td class="org-left"><a href="https://about.sourcegraph.com/docs/code-intelligence/">https://about.sourcegraph.com/docs/code-intelligence/</a></td>
+<td class="org-left">Provided by language servers that run securely in your self-hosted SourceGraph instance</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org05d4e6f" class="outline-2">
+<h2 id="org05d4e6f"><span class="section-number-2">6</span> Bitbucket API research</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+Endpoints
+</p>
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">doc</td>
+<td class="org-left">use case</td>
+</tr>
+
+<tr>
+<td class="org-left">all public repositories</td>
+<td class="org-left">?</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Howto
+<a href="https://confluence.atlassian.com/bitbucket/use-the-bitbucket-cloud-rest-apis-222724129.html">REST APIs - Atlassian Documentation</a>
+</p>
+
+<p>
+Standard HTTP behavior
+</p>
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Call</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">GET</td>
+<td class="org-left">Retrieves information.</td>
+</tr>
+
+<tr>
+<td class="org-left">PUT</td>
+<td class="org-left">Updates existing information.</td>
+</tr>
+
+<tr>
+<td class="org-left">POST</td>
+<td class="org-left">Creates new information.</td>
+</tr>
+
+<tr>
+<td class="org-left">DELETE</td>
+<td class="org-left">Removes existing information.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+<div id="outline-container-org157fdff" class="outline-2">
+<h2 id="org157fdff"><span class="section-number-2">7</span> GitLab API research</h2>
+<div class="outline-text-2" id="text-7">
+</div>
+
+<div id="outline-container-org014070f" class="outline-3">
+<h3 id="org014070f"><span class="section-number-3">7.1</span> Protocol</h3>
+<div class="outline-text-3" id="text-7-1">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">protocol</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">HTTP. Moving to GraphQL.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orgb411ab7" class="outline-3">
+<h3 id="orgb411ab7"><span class="section-number-3">7.2</span> Project-specific repository search (where to find all-public api?)</h3>
+<div class="outline-text-3" id="text-7-2">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">doc url</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><a href="https://docs.gitlab.com/ee/api/repositories.html">https://docs.gitlab.com/ee/api/repositories.html</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org0639404" class="outline-3">
+<h3 id="org0639404"><span class="section-number-3">7.3</span> GitLab Automation</h3>
+<div class="outline-text-3" id="text-7-3">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">doc url</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><a href="https://docs.gitlab.com/ee/api/README.html">https://docs.gitlab.com/ee/api/README.html</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org25e922d" class="outline-3">
+<h3 id="org25e922d"><span class="section-number-3">7.4</span> Code search queries</h3>
+<div class="outline-text-3" id="text-7-4">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">doc url</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><a href="https://docs.gitlab.com/ee/api/search.html">https://docs.gitlab.com/ee/api/search.html</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org22932df" class="outline-3">
+<h3 id="org22932df"><span class="section-number-3">7.5</span> Example commands</h3>
+<div class="outline-text-3" id="text-7-5">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Information Need</th>
+<th scope="col" class="org-left">Command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">merge requests</td>
+<td class="org-left">rhs gitlab get <a href="https://gitlab.example.com/api/v4/search?scope=merge_requests&amp;search=file">https://gitlab.example.com/api/v4/search?scope=merge_requests&amp;search=file</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge39df93" class="outline-2">
+<h2 id="orge39df93"><span class="section-number-2">8</span> GitHub API research</h2>
+<div class="outline-text-2" id="text-8">
+</div>
+<div id="outline-container-org5a245e7" class="outline-3">
+<h3 id="org5a245e7"><span class="section-number-3">8.1</span> Legacy Search</h3>
+<div class="outline-text-3" id="text-8-1">
+<p>
+<a href="https://developer.github.com/v3/search/legacy/">https://developer.github.com/v3/search/legacy/</a>
+</p>
+
+<p>
+This is a listing of the Legacy Search API features from API v2 that have been ported to API v3. There should be no changes, other than the new URL and JSON output format.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org63e1414" class="outline-3">
+<h3 id="org63e1414"><span class="section-number-3">8.2</span> Current API</h3>
+<div class="outline-text-3" id="text-8-2">
+<p>
+<a href="https://developer.github.com/v3/">GitHub REST API v3.</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org955e2dd" class="outline-3">
+<h3 id="org955e2dd"><span class="section-number-3">8.3</span> Protocol</h3>
+<div class="outline-text-3" id="text-8-3">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">protocol</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">HTTP. Moving to GraphQL.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+<div id="outline-container-org57b2a93" class="outline-3">
+<h3 id="org57b2a93"><span class="section-number-3">8.4</span> Example commands</h3>
+<div class="outline-text-3" id="text-8-4">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Information Need</th>
+<th scope="col" class="org-left">documentation</th>
+<th scope="col" class="org-left">use case</th>
+<th scope="col" class="org-left">command</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">code</td>
+<td class="org-left"><a href="https://developer.github.com/v3/search/">https://developer.github.com/v3/search/</a></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Highlighting</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">This provides a dump of every public repository, in the order that they were created.</td>
+<td class="org-left"><a href="https://api.github.com/search/repositories?q=tetris+language:assembly&amp;sort=stars&amp;order=desc">https://api.github.com/search/repositories?q=tetris+language:assembly&amp;sort=stars&amp;order=desc</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org516dc30" class="outline-3">
+<h3 id="org516dc30"><span class="section-number-3">8.5</span> Metadata</h3>
+<div class="outline-text-3" id="text-8-5">
+<p>
+You can find:
+</p>
+<ol class="org-ol">
+<li>repositories</li>
+<li>commits</li>
+<li>code</li>
+<li>files (in repository)</li>
+<li>issues</li>
+<li>users</li>
+<li>topics</li>
+<li>labels</li>
+<li>Text match metadata</li>
+</ol>
+</div>
+
+<div id="outline-container-orgedc425c" class="outline-4">
+<h4 id="orgedc425c"><span class="section-number-4">8.5.1</span> <span class="todo TODO">TODO</span> Find how to get more metadata</h4>
+<div class="outline-text-4" id="text-8-5-1">
+<ul class="org-ul">
+<li>number of repositories?</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgeccb395" class="outline-3">
+<h3 id="orgeccb395"><span class="section-number-3">8.6</span> Ranking</h3>
+<div class="outline-text-3" id="text-8-6">
+<p>
+Sort by best match, as indicated by the score field for each item returned.
+</p>
+
+<p>
+Score is a computed value representing the relevance of an item relative to the other items in the result set.
+</p>
+
+<p>
+Multiple factors are combined to boost the most relevant item to the top of the result list.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgaa9ef03" class="outline-3">
+<h3 id="orgaa9ef03"><span class="section-number-3">8.7</span> Highlighting repository search results</h3>
+<div class="outline-text-3" id="text-8-7">
+<p>
+You can highlight matching search terms when displaying search results.
+</p>
+
+<p>
+The API offers additional metadata to support this use case.
+</p>
+
+<p>
+To get this metadata in your search results, specify the text-match media type in your Accept header.
+</p>
+
+<p>
+Example
+</p>
+<div class="org-src-container">
+<pre class="src src-bash">curl -H <span style="color: #e9b96e;">'Accept: application/vnd.github.v3.text-match+json'</span> <span style="color: #e9b96e;">\</span>
+  <span style="color: #e9b96e;">'https://api.github.com/search/repositories?q=tetris+language:assembly&amp;sort=stars&amp;order=desc'</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf4041ea" class="outline-3">
+<h3 id="orgf4041ea"><span class="section-number-3">8.8</span> Use cases</h3>
+<div class="outline-text-3" id="text-8-8">
+</div>
+<div id="outline-container-org7e89206" class="outline-4">
+<h4 id="org7e89206"><span class="section-number-4">8.8.1</span> Suppose you want to find commits related to CSS in the octocat/Spoon-Knife repository. Your query would look something like this:</h4>
+<div class="outline-text-4" id="text-8-8-1">
+<div class="org-src-container">
+<pre class="src src-text">https://api.github.com/search/repositories?q=tetris+language:assembly&amp;sort=stars&amp;order=desc
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge9b41e6" class="outline-3">
+<h3 id="orge9b41e6"><span class="section-number-3">8.9</span> All endpoints</h3>
+<div class="outline-text-3" id="text-8-9">
+<p>
+<a href="https://developer.github.com/v3/apps/available-endpoints/">https://developer.github.com/v3/apps/available-endpoints/</a>
+</p>
+
+<dl class="org-dl">
+<dt><a href="https://developer.github.com/v3/orgs/#list-all-organizations">list-all-organizations</a></dt><dd>Lists all organizations, in the order that they were created on GitHub.</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-orgbb7a5f5" class="outline-3">
+<h3 id="orgbb7a5f5"><span class="section-number-3">8.10</span> general api</h3>
+<div class="outline-text-3" id="text-8-10">
+<p>
+If you are using an alternative client (wrapper), note that you are required to send a valid User Agent header in
+your request.
+</p>
+
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">examples</td>
+</tr>
+</tbody>
+</table>
+<p>
+<a href="https://gist.github.com/caspyin/2288960">https://gist.github.com/caspyin/2288960</a>
+<a href="https://developer.github.com/v3/guides/getting-started/">https://developer.github.com/v3/guides/getting-started/</a>
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org82fe615" class="outline-2">
+<h2 id="org82fe615"><span class="section-number-2">9</span> Look into software for generating ASTs from source code</h2>
+<div class="outline-text-2" id="text-9">
+</div>
+<div id="outline-container-orgfe3fccb" class="outline-3">
+<h3 id="orgfe3fccb"><span class="section-number-3">9.1</span> python</h3>
+<div class="outline-text-3" id="text-9-1">
+<p>
+Generate Python files AST
+</p>
+</div>
+<div id="outline-container-orga86ac88" class="outline-4">
+<h4 id="orga86ac88"><span class="section-number-4">9.1.1</span> pip search results</h4>
+<div class="outline-text-4" id="text-9-1-1">
+<p>
+<a href="https://www.srl.inf.ethz.ch/py150.php">Software Reliability Lab | ETH | Py150</a>
+</p>
+<div class="org-src-container">
+<pre class="src src-text">bigcode-astgen
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6513ace" class="outline-4">
+<h4 id="org6513ace"><span class="section-number-4">9.1.2</span> Links</h4>
+<div class="outline-text-4" id="text-9-1-2">
+<p>
+<a href="http://pyparsing.wikispaces.com/home">pyparsing is an alternative approach to creating and executing simple grammars, vs. the traditional lex/yacc approach, or the use of regular expressions</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgfdf7f36" class="outline-2">
+<h2 id="orgfdf7f36"><span class="section-number-2">10</span> Examples</h2>
+<div class="outline-text-2" id="text-10">
+</div>
+<div id="outline-container-org187bd0c" class="outline-3">
+<h3 id="org187bd0c"><span class="section-number-3">10.1</span> 5 entertaining things you can find with the GitHub Search API</h3>
+<div class="outline-text-3" id="text-10-1">
+<p>
+<a href="https://gist.github.com/jasonrudolph/6065289">https://gist.github.com/jasonrudolph/6065289</a>
+</p>
+
+<ol class="org-ol">
+<li><a href="https://gist.githubusercontent.com/jasonrudolph/6065289/raw/e666e9f42a2b53178c85742f87b192b167ba3620/00-about-search-api-examples.md">00-about-search-api-examples.md 	# 5 entertaining things you can find with the GitHub Search API</a></li>
+<li><a href="https://gist.githubusercontent.com/jasonrudolph/6065289/raw/e666e9f42a2b53178c85742f87b192b167ba3620/01-trending-repos.md">01-trending-repos.md 	### Find the hottest repositories created in the last week</a></li>
+<li><a href="https://gist.githubusercontent.com/jasonrudolph/6065289/raw/e666e9f42a2b53178c85742f87b192b167ba3620/03-issue-trends.md">03-issue-trends.md 	### How many issues do Ruby developers create each day?</a></li>
+<li><a href="https://gist.githubusercontent.com/jasonrudolph/6065289/raw/e666e9f42a2b53178c85742f87b192b167ba3620/05-resig.md">05-resig.md 	### What does John Resig work on other than JavaScript?</a></li>
+<li><a href="https://gist.githubusercontent.com/jasonrudolph/6065289/raw/e666e9f42a2b53178c85742f87b192b167ba3620/06-trolls.md">06-trolls.md 	### Find the most commented issues in the past month</a></li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7bcc73b" class="outline-2">
+<h2 id="org7bcc73b"><span class="section-number-2">11</span> Searches</h2>
+<div class="outline-text-2" id="text-11">
+<ul class="org-ul">
+<li><a href="https://github.com/search?q=gitlab+api&amp;ref=opensearch">Find gitlab api projects on github</a></li>
+<li><a href="https://github.com/search?q=github+api&amp;ref=opensearch">Find github api projects on github</a></li>
+<li><a href="https://github.com/search?q=bitbucket+api&amp;ref=opensearch">Find bitbucket api projects on github</a></li>
+</ul>
+</div>
+</div>
+
+
+
+<div id="outline-container-org0d02256" class="outline-2">
+<h2 id="org0d02256"><span class="section-number-2">12</span> <span class="todo TODO">TODO</span> Look into open source search engines</h2>
+<div class="outline-text-2" id="text-12">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Project</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">ElasticSearch</td>
+</tr>
+
+<tr>
+<td class="org-left">CodeSearch</td>
+</tr>
+
+<tr>
+<td class="org-left">SphinxSearch</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orgb5cd9f3" class="outline-2">
+<h2 id="orgb5cd9f3"><span class="section-number-2">13</span> Scripts</h2>
+<div class="outline-text-2" id="text-13">
+<p>
+<a href="file:///home/shane/scripts/rhs">rhs &#x2013; repository hosting services script</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf129c24" class="outline-2">
+<h2 id="orgf129c24"><span class="section-number-2">14</span> References</h2>
+<div class="outline-text-2" id="text-14">
+<p>
+<a href="https://en.wikipedia.org/wiki/Comparison_of_source_code_hosting_facilities#Features">https://en.wikipedia.org/wiki/Comparison_of_source_code_hosting_facilities#Features</a>
+</p>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
+26 million people and 1.5 million organizations created 67 million repositories on GitHub in 2017.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2">2</a></sup> <div class="footpara"><p class="footpara">
+interface-driven searches – that is, searches based on the abstract interface that a component offers rather than on the text in its source code.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3">3</a></sup> <div class="footpara"><p class="footpara">
+regular expressions in queries, which at the time was not offered by any other search engine for code. grep, but over the world's public code.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.4" class="footnum" href="#fnr.4">4</a></sup> <div class="footpara"><p class="footpara">
+regular expressions and exact queries to perform full-text searches.
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.5" class="footnum" href="#fnr.5">5</a></sup> <div class="footpara"><p class="footpara">
++ Hover tooltips with documentation and type signatures, + Go to definition, + Find references                                      
+</p>
+
+<p class="footpara">
+<a href="https://about.sourcegraph.com/docs/server/api/">https://about.sourcegraph.com/docs/server/api/</a>
+</p></div></div>
+
+
+</div>
+</div></div>
+</body>
+</html>

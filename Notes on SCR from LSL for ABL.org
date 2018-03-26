@@ -1,0 +1,197 @@
+* External
+[[file:~/dump/home/shane/notes2017/uni/cosc/480-project_FY/research/Source%20Code%20Retrieval%20from%20Large%20Software%20Libraries%20for%20Automatic.pdf][SCR from LSL for ABL.pdf]]
+
+#+BEGIN_SRC bash
+z "$DUMP$HOME/notes2018/uni/cosc/480-project_FY/research/Source Code Retrieval from Large Software Libraries for Automatic.pdf"
+#+END_SRC
+
+* Refactorings
+1. parens to def :: '<,'>s/\(.*\)(\(.*\))/\1:: \2/g
+
+* Prp Method in this Dissertation:
+** Apparatus
+1. BF
+2. QRM
+** Steps
+1. Create BF -- Predict Bug Li
+2. Describe QR Model
+   PRF with SCP
+3. Present a RMF
+
+* Ambiguous Terms
+1. DR :: dimensionality reduction
+1. LT :: Linear Transformation techniques
+
+   Commonly used for DR
+
+   1. LDA :: Linear Discriminant Analysis
+   2. PCA :: Principal Component Analysis
+
+* Models
+1. QRM :: Query Reformulation Model
+2. SBM :: Standard Boolean Model
+3. VSM :: Vector Space Model
+   BoWM :: Bag of Words Model
+4. TFIM :: TF-IDF Models
+5. TFIRM :: TF-IDF Retrieval Models
+6. UM :: Unigram Model
+7. PTM :: Probabilistic Topic Models
+8. LM :: Lanugage Model
+9. RM :: Retrieval Models
+10. LM + BoWM = Unigram Model
+11. MHbP Model
+12. HDbP Model
+
+* Terms
+1. LSL :: Large Software Libraries
+2. ABL :: Automatic Bug Localisation
+3. m :: method
+4. M :: Model
+5. d :: document
+6. Li :: Liklihood
+7. Prp :: Proposed by this dissertation
+8. PrpA :: Proposed Approach
+9. Ralg :: Relevance Algorithm
+10. IN :: Information Need
+11. BL :: Bug Localisation
+12. QR :: Query Reformulation
+13. QRM :: Query Reformulation Model
+14. SCR :: Source Code Retrieval
+    CS :: Code Search
+15. Dm :: Dynamic methods
+16. Sm :: Static methods
+17. IRm :: IR methods
+18. SBM :: Standard Boolean Model
+19. VSM :: Vector Space Model
+    BoW :: Bag of Words
+    BoWM :: BoW Model
+20. BoWa :: BoW assumption
+21. DFR :: Divergence From Randomness
+22. TFIM :: TF-IDF Models
+23. TFIRM :: TF-IDF Retrieval Models
+24. BF :: Bayesian framework
+    PF :: Probabilistic framework
+25. ICN :: Information Content Normalisation
+26. DLN :: Document Length Normalisation
+27. UM :: Unigram Model
+28. PTM :: Probabilistic Topic Models
+29. MU :: Mixture of Unigrams
+30. pLSA :: Probabilistic Latent Semantic Analysis
+31. LDA :: Latent Dirichlet Allocation
+32. DR :: Document Retrieval
+33. LM :: Lanugage Modelling
+34. RM :: Retrieval Models
+35. PD :: Probability Distribution
+36. P1 :: Probability 1
+37. P2 :: Probability 2
+38. VH :: Version Histories
+39. Pr :: Priors
+    PP / PrP :: Prior Probabilities
+40. D+M :: Defect + Modification
+41. TD :: Temporal Decay
+42. DPr :: Document Priors
+43. DP :: Document Preparation
+44. QR :: Query Reformulation
+45. ERF :: Explicit Relevance Feedback
+46. PRF :: Pseudo Relevance Feedback
+47. SCP :: Spacial Code Proximity
+48. rFm :: Roccio's Formula
+49. iTh :: Information Theoretic
+50. RR :: Retrieval Results
+51. DRT :: Document Retrieval Techniques
+52. MRF / RMF :: Markov Random Field / Random Markov Field
+53. Wf :: Word Frequencies
+
+* Math (get correct symbols)
+1. BoW :: ∀x; x ∈ A
+   Each d is a vector of Wf.
+
+* Definitions
+1. P1
+   The probability of having tf occurrences of the term in the document by pure chance.
+      As this decreases, the information content of the document (vis-a-vis/in relation with) the term increases.
+2. P2
+   (1 - P2) is related to the risk of choosing the query term as a discriminative term and works as a normalization factor.
+
+   Can be used as the probability of having one more occurrence of the term in the document, which leads to penalizting the high frequency terms during retrieval.
+3. BoWa :: Each word is sampled independantly from the rest of the words in the document.
+4. BoW / VSM :: A simplifying representation. Each d is a vector of Wf.
+
+* Notes
+1. Ignore structure but perform well:
+   1. LM + BoW = Unigram Model
+   2. iTh + BoW = TF-IDF
+2. BoWa != BoWM
+
+* Annotations
+1. MFR
+2. TF-IDF :: Still Competative
+3. DRT using BoW
+   1. LM :: Uses a PF
+   2. DFR :: iTh
+4. BoW :: Given a set of documents, allows you to rank them
+
+* Uses
+1. Bug report is used as a query
+
+* Problem => Solution
+1. MRF => IR defect, Loss of inter-term relationships in documents
+
+* IN
+1. Concept Localisation
+2. Bug Localisation
+3. Change Impact Analysis
+4. Traceability
+5. Link Recovery
+
+* Outline
+1. Traditional BL Methods
+   1. SCA :: Static Code Analysis
+      Need a call graph.
+      Can't deal with non-executable files.
+   2. Dynamic :: Test cases / Debugger
+      Can't make an exhaustive set.
+      Also, can't deal with non-executable files.
+
+* Outline
+2. IR for BL
+3. Organisation of this dissertation
+4. Dm
+5. Sm
+6. IR Methods
+7. Hybrid methods
+8. SBM
+9. VSM
+10. DFR
+    1. Using different PD in IC
+       1. P1
+       2. P2
+    2. TFIM for P1
+    3. ICN (P2)
+    4. DLN
+11. UM
+12. PTM
+13. MU
+14. pLSA
+15. LDA
+16. DR with PTM
+17. IR for BL
+18. LM
+19. TFIRM
+20. Incorporating VH in IR-based BL
+21. Estimating D+M -based PrP
+22. MHbP Model
+23. HDbP Model
+24. M the Pr with TD
+25. BF for BL
+26. DPr
+27. Experimental Evaluation
+28. DP for BL with VH
+29. RR
+30. Assisting CS with AQR for BL
+31. ERF
+32. PRF
+33. rFm for ARQ
+34. AQR using the RM.
+35. The PrpA to QR for SCR
+36. Wf

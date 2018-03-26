@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2018-03-26 Mon 14:39 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="shane" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org0b8d322">1. External</a></li>
+<li><a href="#orgecb78a5">2. Refactorings</a></li>
+<li><a href="#orgf8cbe5d">3. Prp Method in this Dissertation:</a>
+<ul>
+<li><a href="#org2be931b">3.1. Apparatus</a></li>
+<li><a href="#orgdbf23e7">3.2. Steps</a></li>
+</ul>
+</li>
+<li><a href="#orgab5786d">4. Ambiguous Terms</a></li>
+<li><a href="#org9721d03">5. Models</a></li>
+<li><a href="#org2b38692">6. Terms</a></li>
+<li><a href="#org726b4e0">7. Math (get correct symbols)</a></li>
+<li><a href="#orgc6386be">8. Definitions</a></li>
+<li><a href="#org84c50c9">9. Notes</a></li>
+<li><a href="#org2445132">10. Annotations</a></li>
+<li><a href="#org103dd03">11. Uses</a></li>
+<li><a href="#org0a63e03">12. Problem =&gt; Solution</a></li>
+<li><a href="#org289e631">13. IN</a></li>
+<li><a href="#orgacf8da6">14. Outline</a></li>
+<li><a href="#org0687f52">15. Outline</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0b8d322" class="outline-2">
+<h2 id="org0b8d322"><span class="section-number-2">1</span> External</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+<a href="file:///home/shane/dump/home/shane/notes2017/uni/cosc/480-project_FY/research/Source%20Code%20Retrieval%20from%20Large%20Software%20Libraries%20for%20Automatic.pdf">SCR from LSL for ABL.pdf</a>
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">z <span style="color: #e9b96e;">"$DUMP$HOME/notes2018/uni/cosc/480-project_FY/research/Source Code Retrieval from Large Software Libraries for Automatic.pdf"</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgecb78a5" class="outline-2">
+<h2 id="orgecb78a5"><span class="section-number-2">2</span> Refactorings</h2>
+<div class="outline-text-2" id="text-2">
+<ol class="org-ol">
+<li>parens to def :: '&lt;,'&gt;s/\(.*\)(\(.*\))/\1:: \2/g</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgf8cbe5d" class="outline-2">
+<h2 id="orgf8cbe5d"><span class="section-number-2">3</span> Prp Method in this Dissertation:</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org2be931b" class="outline-3">
+<h3 id="org2be931b"><span class="section-number-3">3.1</span> Apparatus</h3>
+<div class="outline-text-3" id="text-3-1">
+<ol class="org-ol">
+<li>BF</li>
+<li>QRM</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgdbf23e7" class="outline-3">
+<h3 id="orgdbf23e7"><span class="section-number-3">3.2</span> Steps</h3>
+<div class="outline-text-3" id="text-3-2">
+<ol class="org-ol">
+<li>Create BF &#x2013; Predict Bug Li</li>
+<li>Describe QR Model
+PRF with SCP</li>
+<li>Present a RMF</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgab5786d" class="outline-2">
+<h2 id="orgab5786d"><span class="section-number-2">4</span> Ambiguous Terms</h2>
+<div class="outline-text-2" id="text-4">
+<ol class="org-ol">
+<li>DR :: dimensionality reduction</li>
+<li><p>
+LT :: Linear Transformation techniques
+</p>
+
+<p>
+Commonly used for DR
+</p>
+
+<ol class="org-ol">
+<li>LDA :: Linear Discriminant Analysis</li>
+<li>PCA :: Principal Component Analysis</li>
+</ol></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org9721d03" class="outline-2">
+<h2 id="org9721d03"><span class="section-number-2">5</span> Models</h2>
+<div class="outline-text-2" id="text-5">
+<ol class="org-ol">
+<li>QRM :: Query Reformulation Model</li>
+<li>SBM :: Standard Boolean Model</li>
+<li>VSM :: Vector Space Model
+BoWM :: Bag of Words Model</li>
+<li>TFIM :: TF-IDF Models</li>
+<li>TFIRM :: TF-IDF Retrieval Models</li>
+<li>UM :: Unigram Model</li>
+<li>PTM :: Probabilistic Topic Models</li>
+<li>LM :: Lanugage Model</li>
+<li>RM :: Retrieval Models</li>
+<li>LM + BoWM = Unigram Model</li>
+<li>MHbP Model</li>
+<li>HDbP Model</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org2b38692" class="outline-2">
+<h2 id="org2b38692"><span class="section-number-2">6</span> Terms</h2>
+<div class="outline-text-2" id="text-6">
+<ol class="org-ol">
+<li>LSL :: Large Software Libraries</li>
+<li>ABL :: Automatic Bug Localisation</li>
+<li>m :: method</li>
+<li>M :: Model</li>
+<li>d :: document</li>
+<li>Li :: Liklihood</li>
+<li>Prp :: Proposed by this dissertation</li>
+<li>PrpA :: Proposed Approach</li>
+<li>Ralg :: Relevance Algorithm</li>
+<li>IN :: Information Need</li>
+<li>BL :: Bug Localisation</li>
+<li>QR :: Query Reformulation</li>
+<li>QRM :: Query Reformulation Model</li>
+<li>SCR :: Source Code Retrieval
+CS :: Code Search</li>
+<li>Dm :: Dynamic methods</li>
+<li>Sm :: Static methods</li>
+<li>IRm :: IR methods</li>
+<li>SBM :: Standard Boolean Model</li>
+<li>VSM :: Vector Space Model
+BoW :: Bag of Words
+BoWM :: BoW Model</li>
+<li>BoWa :: BoW assumption</li>
+<li>DFR :: Divergence From Randomness</li>
+<li>TFIM :: TF-IDF Models</li>
+<li>TFIRM :: TF-IDF Retrieval Models</li>
+<li>BF :: Bayesian framework
+PF :: Probabilistic framework</li>
+<li>ICN :: Information Content Normalisation</li>
+<li>DLN :: Document Length Normalisation</li>
+<li>UM :: Unigram Model</li>
+<li>PTM :: Probabilistic Topic Models</li>
+<li>MU :: Mixture of Unigrams</li>
+<li>pLSA :: Probabilistic Latent Semantic Analysis</li>
+<li>LDA :: Latent Dirichlet Allocation</li>
+<li>DR :: Document Retrieval</li>
+<li>LM :: Lanugage Modelling</li>
+<li>RM :: Retrieval Models</li>
+<li>PD :: Probability Distribution</li>
+<li>P1 :: Probability 1</li>
+<li>P2 :: Probability 2</li>
+<li>VH :: Version Histories</li>
+<li>Pr :: Priors
+PP / PrP :: Prior Probabilities</li>
+<li>D+M :: Defect + Modification</li>
+<li>TD :: Temporal Decay</li>
+<li>DPr :: Document Priors</li>
+<li>DP :: Document Preparation</li>
+<li>QR :: Query Reformulation</li>
+<li>ERF :: Explicit Relevance Feedback</li>
+<li>PRF :: Pseudo Relevance Feedback</li>
+<li>SCP :: Spacial Code Proximity</li>
+<li>rFm :: Roccio's Formula</li>
+<li>iTh :: Information Theoretic</li>
+<li>RR :: Retrieval Results</li>
+<li>DRT :: Document Retrieval Techniques</li>
+<li>MRF / RMF :: Markov Random Field / Random Markov Field</li>
+<li>Wf :: Word Frequencies</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org726b4e0" class="outline-2">
+<h2 id="org726b4e0"><span class="section-number-2">7</span> Math (get correct symbols)</h2>
+<div class="outline-text-2" id="text-7">
+<ol class="org-ol">
+<li>BoW :: ∀x; x ∈ A
+Each d is a vector of Wf.</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgc6386be" class="outline-2">
+<h2 id="orgc6386be"><span class="section-number-2">8</span> Definitions</h2>
+<div class="outline-text-2" id="text-8">
+<ol class="org-ol">
+<li>P1
+The probability of having tf occurrences of the term in the document by pure chance.
+   As this decreases, the information content of the document (vis-a-vis/in relation with) the term increases.</li>
+<li><p>
+P2
+(1 - P2) is related to the risk of choosing the query term as a discriminative term and works as a normalization factor.
+</p>
+
+<p>
+Can be used as the probability of having one more occurrence of the term in the document, which leads to penalizting the high frequency terms during retrieval.
+</p></li>
+<li>BoWa :: Each word is sampled independantly from the rest of the words in the document.</li>
+<li>BoW / VSM :: A simplifying representation. Each d is a vector of Wf.</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org84c50c9" class="outline-2">
+<h2 id="org84c50c9"><span class="section-number-2">9</span> Notes</h2>
+<div class="outline-text-2" id="text-9">
+<ol class="org-ol">
+<li>Ignore structure but perform well:
+<ol class="org-ol">
+<li>LM + BoW = Unigram Model</li>
+<li>iTh + BoW = TF-IDF</li>
+</ol></li>
+<li>BoWa != BoWM</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org2445132" class="outline-2">
+<h2 id="org2445132"><span class="section-number-2">10</span> Annotations</h2>
+<div class="outline-text-2" id="text-10">
+<ol class="org-ol">
+<li>MFR</li>
+<li>TF-IDF :: Still Competative</li>
+<li>DRT using BoW
+<ol class="org-ol">
+<li>LM :: Uses a PF</li>
+<li>DFR :: iTh</li>
+</ol></li>
+<li>BoW :: Given a set of documents, allows you to rank them</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org103dd03" class="outline-2">
+<h2 id="org103dd03"><span class="section-number-2">11</span> Uses</h2>
+<div class="outline-text-2" id="text-11">
+<ol class="org-ol">
+<li>Bug report is used as a query</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org0a63e03" class="outline-2">
+<h2 id="org0a63e03"><span class="section-number-2">12</span> Problem =&gt; Solution</h2>
+<div class="outline-text-2" id="text-12">
+<ol class="org-ol">
+<li>MRF =&gt; IR defect, Loss of inter-term relationships in documents</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org289e631" class="outline-2">
+<h2 id="org289e631"><span class="section-number-2">13</span> IN</h2>
+<div class="outline-text-2" id="text-13">
+<ol class="org-ol">
+<li>Concept Localisation</li>
+<li>Bug Localisation</li>
+<li>Change Impact Analysis</li>
+<li>Traceability</li>
+<li>Link Recovery</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgacf8da6" class="outline-2">
+<h2 id="orgacf8da6"><span class="section-number-2">14</span> Outline</h2>
+<div class="outline-text-2" id="text-14">
+<ol class="org-ol">
+<li>Traditional BL Methods
+<ol class="org-ol">
+<li>SCA :: Static Code Analysis
+Need a call graph.
+Can't deal with non-executable files.</li>
+<li>Dynamic :: Test cases / Debugger
+Can't make an exhaustive set.
+Also, can't deal with non-executable files.</li>
+</ol></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org0687f52" class="outline-2">
+<h2 id="org0687f52"><span class="section-number-2">15</span> Outline</h2>
+<div class="outline-text-2" id="text-15">
+<ol class="org-ol">
+<li>IR for BL</li>
+<li>Organisation of this dissertation</li>
+<li>Dm</li>
+<li>Sm</li>
+<li>IR Methods</li>
+<li>Hybrid methods</li>
+<li>SBM</li>
+<li>VSM</li>
+<li>DFR
+<ol class="org-ol">
+<li>Using different PD in IC
+<ol class="org-ol">
+<li>P1</li>
+<li>P2</li>
+</ol></li>
+<li>TFIM for P1</li>
+<li>ICN (P2)</li>
+<li>DLN</li>
+</ol></li>
+<li>UM</li>
+<li>PTM</li>
+<li>MU</li>
+<li>pLSA</li>
+<li>LDA</li>
+<li>DR with PTM</li>
+<li>IR for BL</li>
+<li>LM</li>
+<li>TFIRM</li>
+<li>Incorporating VH in IR-based BL</li>
+<li>Estimating D+M -based PrP</li>
+<li>MHbP Model</li>
+<li>HDbP Model</li>
+<li>M the Pr with TD</li>
+<li>BF for BL</li>
+<li>DPr</li>
+<li>Experimental Evaluation</li>
+<li>DP for BL with VH</li>
+<li>RR</li>
+<li>Assisting CS with AQR for BL</li>
+<li>ERF</li>
+<li>PRF</li>
+<li>rFm for ARQ</li>
+<li>AQR using the RM.</li>
+<li>The PrpA to QR for SCR</li>
+<li>Wf</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: shane</p>
+<p class="date">Created: 2018-03-26 Mon 14:39</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
