@@ -33,8 +33,8 @@ reading +114 source code retrieval large ` # Chapter 9: Conclusions `
 
 + TF-IDF :: Used instead of TF within a document-term matrix so common words like 'it' are less frequent.
 + d-t Matrix :: columns are vectors of word frequencies or of TF-IDFs. Rows are the word/term frequencies.
-+ VSM
-+ DFR Framework (Divergence from Randomness Framework)
++ VSM :: Uses simple word frequency vectors to represent a document.
++ DFR Framework :: Divergence from Randomness Framework
 
 *** DFR Framework
 An important class of retrieval models are grouped under the DFR Framework.

@@ -17,7 +17,7 @@
 
 <tr>
 <td class="org-left">**Date**</td>
-<td class="org-left">2018-03-27 18:51:36</td>
+<td class="org-left">2018-03-27 18:53:31</td>
 </tr>
 </tbody>
 </table>
@@ -47,8 +47,8 @@
 
 -   **TF-IDF:** Used instead of TF within a document-term matrix so common words like 'it' are less frequent.
 -   **d-t Matrix:** columns are vectors of word frequencies or of TF-IDFs. Rows are the word/term frequencies.
--   VSM
--   DFR Framework (Divergence from Randomness Framework)
+-   **VSM:** Uses simple word frequency vectors to represent a document.
+-   **DFR Framework:** Divergence from Randomness Framework
 
 
 ### DFR Framework
