@@ -17,7 +17,7 @@
 
 <tr>
 <td class="org-left">**Date**</td>
-<td class="org-left">2018-03-27 02:41:03</td>
+<td class="org-left">2018-03-27 18:49:46</td>
 </tr>
 </tbody>
 </table>
@@ -27,10 +27,68 @@
 
 # External
 
-[SCR from LSL for ABL.pdf](file:///home/shane/dump/home/shane/notes2017/uni/cosc/480-project_FY/research/Source%20Code%20Retrieval%20from%20Large%20Software%20Libraries%20for%20Automatic.pdf)
+[SCR from LSL for ABL.pdf](file:///home/shane/dump/home/shane/notes2018/uni/cosc/480-project_FY/research/Source Code Retrieval from Large Software Libraries for Automatic.pdf)
 
-    z "$DUMP$HOME/notes2018/uni/cosc/480-project_FY/research/Source Code Retrieval from Large Software Libraries for Automatic.pdf"
-    sp "$DUMP$HOME/notes2018/uni/cosc/480-project_FY/research/Source Code Retrieval from Large Software Libraries for Automatic.txt"
+    reading +1 source code retrieval large ` # Chapter 1: Introduction `
+    reading +7 source code retrieval large ` # Chapter 2: Related Work `
+    reading +12 source code retrieval large ` # Chapter 3: Models for Document Retrieval `
+    reading +25 source code retrieval large ` # Chapter 4: Information Retrieval For Bug Localization `
+    reading +31 source code retrieval large ` # Chapter 5: Incorporating Version Histories In Ir-Based Bug Localization `
+    reading +51 source code retrieval large ` # Chapter 6: Assisting Code Search With Automatic Query Reformulation For Bug Localization `
+    reading +79 source code retrieval large ` # Chapter 7: Exploiting Source Code Proximity And Order With Markov Random Fields `
+    reading +109 source code retrieval large ` # Chapter 8: A Retrieval Engine For Bug Localization:Terrier+ `
+    reading +114 source code retrieval large ` # Chapter 9: Conclusions `
+
+
+# Zathura &#x2013; add 12 to go to page
+
+
+# Summaries
+
+
+## Chapter 3: Models for Document Retrieval
+
+
+### TF-IDF :: Used instead of TF within a document-term matrix so common words like 'it' are less frequent.
+
+
+### d-t Matrix :: columns are vectors of word frequencies or of TF-IDFs. Rows are the word/term frequencies.
+
+
+### VSM
+
+
+### DFR Framework (Divergence from Randomness Framework)
+
+An important class of retrieval models are grouped under the DFR Framework.
+It's an information theoretic approach that evaluates the appropriateness of a document to a query on the basis.
+
+
+## Chapter 4: Information Retrieval for Bug Localisation
+
+
+## Chapter 5: Incorporating Version Histories in IR-Based Bug Localisation
+
+
+## Chapter 6: Assisting Code Search With Automatic Query Reformulation for Bug Localisation
+
+
+## Chapter 7: Exploiting Source Code Proximity And Order With Markov Random Fields
+
+
+## Chapter 8: A Retrieval Engine for Bug Localisation: Terrier+
+
+
+## Conclusions
+
+
+# Terms
+
+
+## Information theoretic :: regarding information theory
+
+
+## Information theory :: studies the quantification, storage, and communication of information.
 
 
 # Refactorings
@@ -344,4 +402,10 @@ Large and changing
 Not indicate any word more important than others, makes any logical query possible.
 
 -   **SBM:** Bool Logic & Set Theory
+
+
+# Official Terms
+
+1.  V :: Vocabulary of the corpus
+2.  N or |V| :: Size of V
 
