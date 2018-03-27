@@ -17,7 +17,7 @@
 
 <tr>
 <td class="org-left">**Date**</td>
-<td class="org-left">2018-03-27 18:49:46</td>
+<td class="org-left">2018-03-27 18:51:36</td>
 </tr>
 </tbody>
 </table>
@@ -40,25 +40,18 @@
     reading +114 source code retrieval large ` # Chapter 9: Conclusions `
 
 
-# Zathura &#x2013; add 12 to go to page
-
-
 # Summaries
 
 
 ## Chapter 3: Models for Document Retrieval
 
-
-### TF-IDF :: Used instead of TF within a document-term matrix so common words like 'it' are less frequent.
-
-
-### d-t Matrix :: columns are vectors of word frequencies or of TF-IDFs. Rows are the word/term frequencies.
-
-
-### VSM
+-   **TF-IDF:** Used instead of TF within a document-term matrix so common words like 'it' are less frequent.
+-   **d-t Matrix:** columns are vectors of word frequencies or of TF-IDFs. Rows are the word/term frequencies.
+-   VSM
+-   DFR Framework (Divergence from Randomness Framework)
 
 
-### DFR Framework (Divergence from Randomness Framework)
+### DFR Framework
 
 An important class of retrieval models are grouped under the DFR Framework.
 It's an information theoretic approach that evaluates the appropriateness of a document to a query on the basis.

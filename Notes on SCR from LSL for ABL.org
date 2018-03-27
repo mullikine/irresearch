@@ -28,16 +28,18 @@ reading +109 source code retrieval large ` # Chapter 8: A Retrieval Engine For B
 reading +114 source code retrieval large ` # Chapter 9: Conclusions `
 #+END_SRC
 
-* Zathura -- add 12 to go to page
-
 * Summaries
 ** Chapter 3: Models for Document Retrieval
-*** TF-IDF :: Used instead of TF within a document-term matrix so common words like 'it' are less frequent.
-*** d-t Matrix :: columns are vectors of word frequencies or of TF-IDFs. Rows are the word/term frequencies.
-*** VSM
-*** DFR Framework (Divergence from Randomness Framework)
+
++ TF-IDF :: Used instead of TF within a document-term matrix so common words like 'it' are less frequent.
++ d-t Matrix :: columns are vectors of word frequencies or of TF-IDFs. Rows are the word/term frequencies.
++ VSM
++ DFR Framework (Divergence from Randomness Framework)
+
+*** DFR Framework
 An important class of retrieval models are grouped under the DFR Framework.
 It's an information theoretic approach that evaluates the appropriateness of a document to a query on the basis.
+
 ** Chapter 4: Information Retrieval for Bug Localisation
 ** Chapter 5: Incorporating Version Histories in IR-Based Bug Localisation
 ** Chapter 6: Assisting Code Search With Automatic Query Reformulation for Bug Localisation
