@@ -15,4 +15,6 @@
 | *Last Updated* | {{{time(%Y-%m-%d %H:%M:%S)}}} |
 #+HTML: </div>
 
+[[./vim.png]]
+
 #+INCLUDE: "~/dump/home/shane/notes2018/ws/github/mullikine/irresearch/links.org" 
